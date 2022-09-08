@@ -1,0 +1,15 @@
+---
+title: "About this webpage"
+output: 
+  html_document:
+    theme: cerulean
+    css: page_01.css
+    fig_caption: no
+    number_sections: no
+    toc: no
+    toc_float: false
+    collapsed: no
+---
+
+```{r child="about.md"}
+```
