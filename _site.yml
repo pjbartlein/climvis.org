@@ -23,7 +23,7 @@ navbar:
   right:
    - text: About
      menu:
-     - text: Acknowledgeents
+     - text: Acknowledgments
        href: ack.html
      - text: About this page
        href: about.html
