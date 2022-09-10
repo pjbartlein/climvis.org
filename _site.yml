@@ -5,9 +5,9 @@ navbar:
   - text: Overview
     menu:
     - text: Introduction
-      href: intro.html
+      href: overview.html
     - text: Data sources
-      href: data.html
+      href: datasources.html
   - text: Animations
     menu:
     - text: Global
@@ -24,7 +24,7 @@ navbar:
    - text: About
      menu:
      - text: Acknowledgments
-       href: ack.html
+       href: acknowledgments.html
      - text: About this page
        href: about.html
        
