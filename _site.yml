@@ -5,7 +5,7 @@ navbar:
   - text: Overview
     menu:
     - text: Introduction
-      href: overview.html
+      href: introduction.html
     - text: Data sources
       href: datasources.html
   - text: Animations
@@ -20,13 +20,12 @@ navbar:
     menu:
     - text:  Hovmöller plots
       href:  hov.html
-  right:
-   - text: About
-     menu:
-     - text: Acknowledgments
-       href: acknowledgments.html
-     - text: About this page
-       href: about.html
+  - text: About
+    menu:
+    - text: Acknowledgments
+      href: acknowledgments.html
+    - text: About this page
+      href: about.html
        
 output:
   html_document:
