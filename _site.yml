@@ -29,6 +29,8 @@ navbar:
        
 output:
   html_document:
+    includes:
+      in_header: header.html
     theme: cerulean
     highlight: haddock
     css: page_01.css
