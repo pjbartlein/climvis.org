@@ -1,3 +1,5 @@
+<link rel="shortcut icon" href="favicon.ico"/>
+
 ![](images/climvis.png)
 
 ## Visualizations and Animations from ERA5 Renalysis Data ##
