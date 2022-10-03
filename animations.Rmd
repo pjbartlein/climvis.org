@@ -2,8 +2,6 @@
 title: "Global Climate Animations"
 output: 
   html_document:
-    includes:
-      in_header: header.html
     theme: cerulean
     css: page_01.css
     fig_caption: no
