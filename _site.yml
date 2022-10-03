@@ -1,6 +1,6 @@
 name: climvis.org
 navbar:
-  title: 	"&#9729; climvis.org"
+  title: 	"climvis.org"
   left:
   - text: Overview
     menu:
