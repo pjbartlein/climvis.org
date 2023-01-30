@@ -1,4 +1,4 @@
-The maps on this page are based on data from the ERA5 and ERA5-Land Reanalysis data sets, were drawn using the NCAR Command Language (NCL) and animated using HAnis – the HTML5 Image AnimationS webapp.  See the acknowledgments below.  The data plotted are 1991-2020 long-term means. The resolution of the data behind the ERA5 global maps is 0.25 degrees, and 0.1 degrees for the ERA5-Land North America and CONUS maps.  See the elevation maps below. 
+The maps on this page are based on data from the ERA5 and ERA5-Land Reanalysis data sets, were drawn using the NCAR Command Language (NCL) and animated using HAnis – the HTML5 Image AnimationS webapp.  See the acknowledgments below.  The resolution of the data behind the global maps is 0.25-degrees.  The data plotted are 1991-2020 long-term means.
 
 **Global energy balance**  
 
@@ -71,13 +71,6 @@ Energy-balance components follow the Sellers (1968) sign convention:
 [[Zonal & meridional wind]](https://pages.uoregon.edu/climvis/content/maps/xsect/uv_xsect_1991-2020_ltm/uv_xsect_1991-2020_ltm.html)
 [[Zonal & meridional wind -- annual average]](https://pages.uoregon.edu/climvis/content/maps/xsect/uv_xsect_1991-2020_ltm/png/uv_xsect_1991-2020_ltm_ann.png)   
 
-*Streamlines*  
-[[Surface (10m)]](https://pages.uoregon.edu/climvis/content/maps/globe/stream_10m_globe_1991-2020_ltm/stream_10m_globe_1991-2020_ltm.html)
-[[500 hPa]](https://pages.uoregon.edu/climvis/content/maps/globe/stream_500_globe_1991-2020_ltm/stream_500_globe_1991-2020_ltm.html)
-[[300 hPa]](https://pages.uoregon.edu/climvis/content/maps/globe/stream_300_globe_1991-2020_ltm/stream_300_globe_1991-2020_ltm.html)  
-[[Surface (10m) (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/stream_10m_polar_1991-2020_ltm/stream_10m_polar_1991-2020_ltm.html)
-[[500 hPa (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/stream_500_polar_1991-2020_ltm/stream_500_polar_1991-2020_ltm.html)
-[[300 hPa (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/stream_300_polar_1991-2020_ltm/stream_300_polar_1991-2020_ltm.html) 
  	
 Vertical velocity (omega) and the U and V components of the wind use the following sign convention:
 
@@ -85,16 +78,6 @@ Vertical velocity (omega) and the U and V components of the wind use the followi
 * U component, positive toward the east (blue), negative toward the west (red);
 * V component, positive toward the north (blue), negative toward the south (red)
 	 
-**Energy**
-
-*Atmospheric energy fluxes*  
-[[Total energy flux]](https://pages.uoregon.edu/climvis/content/maps/globe/uv_tef_vint_globe_1991-2020_ltm/uv_tef_vint_globe_1991-2020_ltm.html)
-[[Heat flux]](https://pages.uoregon.edu/climvis/content/maps/globe/uv_hf_vint_globe_1991-2020_ltm/uv_hf_vint_globe_1991-2020_ltm.html)
-[[Latent heat flux]](https://pages.uoregon.edu/climvis/content/maps/globe/uv_lh_vint_globe_1991-2020_ltm/uv_lh_vint_globe_1991-2020_ltm.html)
-[[Kinetic energy flux]](https://pages.uoregon.edu/climvis/content/maps/globe/uv_ke_vint_globe_1991-2020_ltm/uv_ke_vint_globe_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/globe/eflux_globe_1991-2020_ltm/eflux_globe_1991-2020_ltm.html)
-(note the different scales)
-
 **Atmospheric moisture**
 
 *Moisture flux and water vapor*   
@@ -103,7 +86,7 @@ Vertical velocity (omega) and the U and V components of the wind use the followi
 [[vertically integrated water vapor]](https://pages.uoregon.edu/climvis/content/maps/globe/tcwv_globe_1991-2020_ltm/tcwv_globe_1991-2020_ltm.html)
 [[all]](https://pages.uoregon.edu/climvis/content/maps/globe/mflux_globe_1991-2020_ltm/mflux_globe_1991-2020_ltm.html)  
 [[air temperature and specific humidity meridional cross section]](https://pages.uoregon.edu/climvis/content/maps/xsect/t_q_xsect_1991-2020_ltm/t_q_xsect_1991-2020_ltm.html)
-[[below 100 hPa]](https://pages.uoregon.edu/climvis/content/maps/xsect/t_q_xsect2_1991-2020_ltm/t_q_xsect2_1991-2020_ltm.html)
+[[below 100 hPa]](https://pages.uoregon.edu/climvis/content/maps/xsect/t_q_xsect2_1991-2020_ltm/t_q_xsect2_1991-2020_ltm.html)	
 
 **Global water balance/precipitation/snow**   
  
@@ -164,25 +147,6 @@ These maps show ERA5-Land data for selected variables.  The ERA5-Land data are o
 [[precipitation rate, ERA5-Land]](https://pages.uoregon.edu/climvis/content/maps/conus_e5land/tp_conus_e5land_1991-2020_ltm/tp_conus_e5land_1991-2020_ltm.html) 
 [[precipitation rate, ERA5]](https://pages.uoregon.edu/climvis/content/maps/conus/tp_conus_1991-2020_ltm/tp_conus_1991-2020_ltm.html)
 
-**Reanalysis Grid-point Elevations**
-
-The scale of the climatic features that can be resolved by the reanalysis data depends on the resolution of the models.  For the ERA5 data, the resolution is 0.25 degrees, and for the ERA5-Land data, the resolution is 0.10 degrees.  In both cases, real "landscape-scale" features that are of smaller spatial scale will not be resolved by the data, or visible on the maps on this page.
-
-*ERA5 (0.25-degree)*  
-[[Globe]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_globe_clr.png) 
-[[Globe b&w]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_globe.png) 
-[[North America]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_namer_clr.png) 
-[[North America b&w]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_namer_clr.png) 
-[[CONUS]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_conus_clr.png)
-[[CONUS b&w]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_conus.png)
-
-*ERA5-Land (0.25-degree)*
-[[Globe]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_globe_clr.png) 
-[[Globe b&w]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_globe.png) 
-[[North America]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_namer_clr.png) 
-[[North America b&w]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_namer.png) 
-[[CONUS]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_conus_clr.png)
-[[CONUS b&w]](https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_conus.png)
 
 **Acknowledgements**
 
@@ -207,7 +171,7 @@ J. Muñoz-Sabater, Dutra, E., Agustí-Panareda, A., Albergel, C., Arduini, G., B
 *Maps*
 
 Maps were created using the NCAR Command Language (NCL) [[https://www.ncl.ucar.edu]](https://www.ncl.ucar.edu)
-The NCAR Command Language (Version 6.6.2) [Software]. (2019). Boulder, Colorado: UCAR/NCAR/CISL/TDD. http://dx.doi.org/10.5065/D6WD3XH5
+The NCAR Command Language (Version 6.6.2) [Software]. (2019). Boulder, Colorado: UCAR/NCAR/CISL/TDD. http:/dx.doi.org/10.5065/D6WD3XH5
 
 Shapefiles for the continental outlines and administrative units on the ERA5-Land maps were downloaded from Natural Earth [[https://www.naturalearthdata.com]](https://www.naturalearthdata.com)
 

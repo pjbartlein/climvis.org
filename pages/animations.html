@@ -13,7 +13,7 @@
 
 <title>Global Climate Animations</title>
 
-<script src="site_libs/header-attrs-2.15/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
@@ -30,15 +30,16 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png"/>
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png"/>
-<link rel="manifest" href="favicons/site.webmanifest"/>
-<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5"/>
-<link rel="shortcut icon" href="favicons/favicon.ico"/>
-<meta name="msapplication-TileColor" content="#da532c"/>
-<meta name="msapplication-config" content="favicons/browserconfig.xml"/>
-<meta name="theme-color" content="#ffffff"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png"/>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png"/>
+	<link rel="manifest" href="favicons/site.webmanifest"/>
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5"/>
+	<link rel="shortcut icon" href="favicons/favicon.ico"/>
+	<link rel="icon" href="favicons/favicon.ico"/>
+	<meta name="msapplication-TileColor" content="#da532c"/>
+	<meta name="msapplication-config" content="favicons/browserconfig.xml"/>
+	<meta name="theme-color" content="#ffffff"/>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -176,8 +177,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -185,16 +186,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -333,8 +327,10 @@ $(document).ready(function () {
 <p>The maps on this page are based on data from the ERA5 and ERA5-Land
 Reanalysis data sets, were drawn using the NCAR Command Language (NCL)
 and animated using HAnis – the HTML5 Image AnimationS webapp. See the
-acknowledgments below. The resolution of the data behind the global maps
-is 0.25-degrees. The data plotted are 1991-2020 long-term means.</p>
+acknowledgments below. The data plotted are 1991-2020 long-term means.
+The resolution of the data behind the ERA5 global maps is 0.25 degrees,
+and 0.1 degrees for the ERA5-Land North America and CONUS maps. See the
+elevation maps below.</p>
 <p><strong>Global energy balance</strong></p>
 <p><em>Radiative components – Top of the Atmosphere (TOA)</em><br />
 <a
@@ -466,6 +462,21 @@ href="https://pages.uoregon.edu/climvis/content/maps/xsect/uv_xsect_1991-2020_lt
 &amp; meridional wind]</a> <a
 href="https://pages.uoregon.edu/climvis/content/maps/xsect/uv_xsect_1991-2020_ltm/png/uv_xsect_1991-2020_ltm_ann.png">[Zonal
 &amp; meridional wind – annual average]</a></p>
+<p><em>Streamlines</em><br />
+<a
+href="https://pages.uoregon.edu/climvis/content/maps/globe/stream_10m_globe_1991-2020_ltm/stream_10m_globe_1991-2020_ltm.html">[Surface
+(10m)]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/globe/stream_500_globe_1991-2020_ltm/stream_500_globe_1991-2020_ltm.html">[500
+hPa]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/globe/stream_300_globe_1991-2020_ltm/stream_300_globe_1991-2020_ltm.html">[300
+hPa]</a><br />
+<a
+href="https://pages.uoregon.edu/climvis/content/maps/polar/stream_10m_polar_1991-2020_ltm/stream_10m_polar_1991-2020_ltm.html">[Surface
+(10m) (polar)]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/polar/stream_500_polar_1991-2020_ltm/stream_500_polar_1991-2020_ltm.html">[500
+hPa (polar)]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/polar/stream_300_polar_1991-2020_ltm/stream_300_polar_1991-2020_ltm.html">[300
+hPa (polar)]</a></p>
 <p>Vertical velocity (omega) and the U and V components of the wind use
 the following sign convention:</p>
 <ul>
@@ -475,6 +486,19 @@ west (red);</li>
 <li>V component, positive toward the north (blue), negative toward the
 south (red)</li>
 </ul>
+<p><strong>Energy</strong></p>
+<p><em>Atmospheric energy fluxes</em><br />
+<a
+href="https://pages.uoregon.edu/climvis/content/maps/globe/uv_tef_vint_globe_1991-2020_ltm/uv_tef_vint_globe_1991-2020_ltm.html">[Total
+energy flux]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/globe/uv_hf_vint_globe_1991-2020_ltm/uv_hf_vint_globe_1991-2020_ltm.html">[Heat
+flux]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/globe/uv_lh_vint_globe_1991-2020_ltm/uv_lh_vint_globe_1991-2020_ltm.html">[Latent
+heat flux]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/globe/uv_ke_vint_globe_1991-2020_ltm/uv_ke_vint_globe_1991-2020_ltm.html">[Kinetic
+energy flux]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/globe/eflux_globe_1991-2020_ltm/eflux_globe_1991-2020_ltm.html">[all]</a>
+(note the different scales)</p>
 <p><strong>Atmospheric moisture</strong></p>
 <p><em>Moisture flux and water vapor</em><br />
 <a
@@ -586,6 +610,40 @@ href="https://pages.uoregon.edu/climvis/content/maps/conus_e5land/tp_conus_e5lan
 rate, ERA5-Land]</a> <a
 href="https://pages.uoregon.edu/climvis/content/maps/conus/tp_conus_1991-2020_ltm/tp_conus_1991-2020_ltm.html">[precipitation
 rate, ERA5]</a></p>
+<p><strong>Reanalysis Grid-point Elevations</strong></p>
+<p>The scale of the climatic features that can be resolved by the
+reanalysis data depends on the resolution of the models. For the ERA5
+data, the resolution is 0.25 degrees, and for the ERA5-Land data, the
+resolution is 0.10 degrees. In both cases, real “landscape-scale”
+features that are of smaller spatial scale will not be resolved by the
+data, or visible on the maps on this page.</p>
+<p><em>ERA5 (0.25-degree)</em><br />
+<a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_globe_clr.png">[Globe]</a>
+<a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_globe.png">[Globe
+b&amp;w]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_namer_clr.png">[North
+America]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_namer_clr.png">[North
+America b&amp;w]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_conus_clr.png">[CONUS]</a>
+<a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5_elev_conus.png">[CONUS
+b&amp;w]</a></p>
+<p><em>ERA5-Land (0.25-degree)</em> <a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_globe_clr.png">[Globe]</a>
+<a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_globe.png">[Globe
+b&amp;w]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_namer_clr.png">[North
+America]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_namer.png">[North
+America b&amp;w]</a> <a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_conus_clr.png">[CONUS]</a>
+<a
+href="https://pages.uoregon.edu/climvis/content/maps/elev/ERA5-Land_elev_conus.png">[CONUS
+b&amp;w]</a></p>
 <p><strong>Acknowledgements</strong></p>
 <p><em>Data sources</em></p>
 <p>The global data plotted here are from the ECMWF fifth-generation ERA5
@@ -641,8 +699,8 @@ href="https://doi.org/10.5194/essd-13-4349-2021">[https://doi.org/10.5194/essd-1
 <p>Maps were created using the NCAR Command Language (NCL) <a
 href="https://www.ncl.ucar.edu">[https://www.ncl.ucar.edu]</a> The NCAR
 Command Language (Version 6.6.2) [Software]. (2019). Boulder, Colorado:
-UCAR/NCAR/CISL/TDD. <a href="http:/dx.doi.org/10.5065/D6WD3XH5"
-class="uri">http:/dx.doi.org/10.5065/D6WD3XH5</a></p>
+UCAR/NCAR/CISL/TDD. <a href="http://dx.doi.org/10.5065/D6WD3XH5"
+class="uri">http://dx.doi.org/10.5065/D6WD3XH5</a></p>
 <p>Shapefiles for the continental outlines and administrative units on
 the ERA5-Land maps were downloaded from Natural Earth <a
 href="https://www.naturalearthdata.com">[https://www.naturalearthdata.com]</a></p>
