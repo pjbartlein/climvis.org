@@ -36,6 +36,6 @@ output:
     css: page_01.css
     lib_dir: site_libs
     self_contained: no
-    output_dir: "./pages/"
+    output_dir: "./docs/"
 output_dir: pages
 
