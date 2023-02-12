@@ -3,7 +3,7 @@ The maps on this page are based on data from the ERA5 and ERA5-Land Reanalysis d
 **Global energy balance**  
 
 *Radiative components -- Top of the Atmosphere (TOA)*  
-[[Incident SW]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tisr_globe_1991-2020_ltm/tisr_globe_1991-2020_ltm.html)
+[[Incident SW]](../content/anim/ltm/globe/tisr_globe_1991-2020_ltm/tisr_globe_1991-2020_ltm.html)
 [[TOA SW up]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tsru_globe_1991-2020_ltm/tsru_globe_1991-2020_ltm.html) 
 [[TOA net SW]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tsr_globe_1991-2020_ltm/tsr_globe_1991-2020_ltm.html)
 [[TOA down | TOA up | TOA net | Sfc net]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/toa_globe_1991-2020_ltm/toa_globe_1991-2020_ltm.html)
