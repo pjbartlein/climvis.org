@@ -3,30 +3,30 @@ The maps on this page are based on data from the ERA5 and ERA5-Land Reanalysis d
 **Global energy balance**  
 
 *Radiative components -- Top of the Atmosphere (TOA)*  
-[[Incident SW]](https://pages.uoregon.edu/climvis/content/maps/globe/tisr_globe_1991-2020_ltm/tisr_globe_1991-2020_ltm.html)
-[[TOA SW up]](https://pages.uoregon.edu/climvis/content/maps/globe/tsru_globe_1991-2020_ltm/tsru_globe_1991-2020_ltm.html) 
-[[TOA net SW]](https://pages.uoregon.edu/climvis/content/maps/globe/tsr_globe_1991-2020_ltm/tsr_globe_1991-2020_ltm.html)
-[[TOA down | TOA up | TOA net | Sfc net]](https://pages.uoregon.edu/climvis/content/maps/globe/toa_globe_1991-2020_ltm/toa_globe_1991-2020_ltm.html)
+[[Incident SW]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tisr_globe_1991-2020_ltm/tisr_globe_1991-2020_ltm.html)
+[[TOA SW up]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tsru_globe_1991-2020_ltm/tsru_globe_1991-2020_ltm.html) 
+[[TOA net SW]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tsr_globe_1991-2020_ltm/tsr_globe_1991-2020_ltm.html)
+[[TOA down | TOA up | TOA net | Sfc net]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/toa_globe_1991-2020_ltm/toa_globe_1991-2020_ltm.html)
 
 *Radiative components -- Surface*  
-[[SW down]](https://pages.uoregon.edu/climvis/content/maps/globe/ssrd_globe_1991-2020_ltm/ssrd_globe_1991-2020_ltm.html)
-[[SW up]](https://pages.uoregon.edu/climvis/content/maps/globe/ssru_globe_1991-2020_ltm/ssru_globe_1991-2020_ltm.html)
-[[SW net]](https://pages.uoregon.edu/climvis/content/maps/globe/ssr_globe_1991-2020_ltm/ssr_globe_1991-2020_ltm.html)
-[[SW down | SW up | net SW]](https://pages.uoregon.edu/climvis/content/maps/globe/ss_globe_1991-2020_ltm/ss_globe_1991-2020_ltm.html)  
-[[LW down]](https://pages.uoregon.edu/climvis/content/maps/globe/strd_globe_1991-2020_ltm/strd_globe_1991-2020_ltm.html)
-[[LW up]](https://pages.uoregon.edu/climvis/content/maps/globe/stru_globe_1991-2020_ltm/stru_globe_1991-2020_ltm.html)
-[[LW net]](https://pages.uoregon.edu/climvis/content/maps/globe/str_globe_1991-2020_ltm/str_globe_1991-2020_ltm.html)
-[[LW down | LW up | net LW]](https://pages.uoregon.edu/climvis/content/maps/globe/st_globe_1991-2020_ltm/st_globe_1991-2020_ltm.html)  
-[[net SW]](https://pages.uoregon.edu/climvis/content/maps/globe/ssr_globe_1991-2020_ltm/ssr_globe_1991-2020_ltm.html) 
-[[net LW]](https://pages.uoregon.edu/climvis/content/maps/globe/str_globe_1991-2020_ltm/str_globe_1991-2020_ltm.html)
-[[net radiation]](https://pages.uoregon.edu/climvis/content/maps/globe/snr_globe_1991-2020_ltm/snr_globe_1991-2020_ltm.html)
-[[net SW | net LW | net radiation]](https://pages.uoregon.edu/climvis/content/maps/globe/sn_globe_1991-2020_ltm/sn_globe_1991-2020_ltm.html)  
+[[SW down]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/ssrd_globe_1991-2020_ltm/ssrd_globe_1991-2020_ltm.html)
+[[SW up]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/ssru_globe_1991-2020_ltm/ssru_globe_1991-2020_ltm.html)
+[[SW net]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/ssr_globe_1991-2020_ltm/ssr_globe_1991-2020_ltm.html)
+[[SW down | SW up | net SW]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/ss_globe_1991-2020_ltm/ss_globe_1991-2020_ltm.html)  
+[[LW down]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/strd_globe_1991-2020_ltm/strd_globe_1991-2020_ltm.html)
+[[LW up]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/stru_globe_1991-2020_ltm/stru_globe_1991-2020_ltm.html)
+[[LW net]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/str_globe_1991-2020_ltm/str_globe_1991-2020_ltm.html)
+[[LW down | LW up | net LW]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/st_globe_1991-2020_ltm/st_globe_1991-2020_ltm.html)  
+[[net SW]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/ssr_globe_1991-2020_ltm/ssr_globe_1991-2020_ltm.html) 
+[[net LW]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/str_globe_1991-2020_ltm/str_globe_1991-2020_ltm.html)
+[[net radiation]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/snr_globe_1991-2020_ltm/snr_globe_1991-2020_ltm.html)
+[[net SW | net LW | net radiation]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/sn_globe_1991-2020_ltm/sn_globe_1991-2020_ltm.html)  
 
 *Non-radiative components*   
-[[sensible heat flux]](https://pages.uoregon.edu/climvis/content/maps/globe/sshf_globe_1991-2020_ltm/sshf_globe_1991-2020_ltm.html)
-[[latent heat flux]](https://pages.uoregon.edu/climvis/content/maps/globe/slhf_globe_1991-2020_ltm/slhf_globe_1991-2020_ltm.html)
-[[substrate heat flux/change in storage]](https://pages.uoregon.edu/climvis/content/maps/globe/sghf_globe_1991-2020_ltm/sghf_globe_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/globe/shf_globe_1991-2020_ltm/shf_globe_1991-2020_ltm.html)
+[[sensible heat flux]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/sshf_globe_1991-2020_ltm/sshf_globe_1991-2020_ltm.html)
+[[latent heat flux]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/slhf_globe_1991-2020_ltm/slhf_globe_1991-2020_ltm.html)
+[[substrate heat flux/change in storage]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/sghf_globe_1991-2020_ltm/sghf_globe_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/shf_globe_1991-2020_ltm/shf_globe_1991-2020_ltm.html)
 
 Energy-balance components follow the Sellers (1968) sign convention:  
 
@@ -36,48 +36,48 @@ Energy-balance components follow the Sellers (1968) sign convention:
   
 **Temperature**  
 
-[[2m air temperature]](https://pages.uoregon.edu/climvis/content/maps/globe/t2m_globe_1991-2020_ltm/t2m_globe_1991-2020_ltm.html) 
-[[2m air temperature (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/t2m_polar_1991-2020_ltm/t2m_polar_1991-2020_ltm.html)
-[[Surface net radiation & 2m air temp]](https://pages.uoregon.edu/climvis/content/maps/globe/t2m_snr_globe_1991-2020_ltm/t2m_snr_globe_1991-2020_ltm.html)  
+[[2m air temperature]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/t2m_globe_1991-2020_ltm/t2m_globe_1991-2020_ltm.html) 
+[[2m air temperature (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/t2m_polar_1991-2020_ltm/t2m_polar_1991-2020_ltm.html)
+[[Surface net radiation & 2m air temp]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/t2m_snr_globe_1991-2020_ltm/t2m_snr_globe_1991-2020_ltm.html)  
 
 **Atmospheric circulation & winds**  
 
 *Surface*  
-[[SLP & 10m winds]](https://pages.uoregon.edu/climvis/content/maps/globe/msl_sfcwind_globe_1991-2020_ltm/msl_sfcwind_globe_1991-2020_ltm.html)
-[[SLP & 10m winds (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/msl_sfcwind_polar_1991-2020_ltm/msl_sfcwind_polar_1991-2020_ltm.html)  
-[[U-component 10 m wind]](https://pages.uoregon.edu/climvis/content/maps/globe/u10_wind_globe_1991-2020_ltm/u10_wind_globe_1991-2020_ltm.html) 
-[[V-component 10 m wind]](https://pages.uoregon.edu/climvis/content/maps/globe/v10_wind_globe_1991-2020_ltm/v10_wind_globe_1991-2020_ltm.html)
-[[10 m wind speed]](https://pages.uoregon.edu/climvis/content/maps/globe/vmag10_wind_globe_1991-2020_ltm/vmag10_wind_globe_1991-2020_ltm.html)  
-[[U-component 10 m wind (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/u10_wind_polar_1991-2020_ltm/u10_wind_polar_1991-2020_ltm.html)
-[[V-component 10 m wind (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/v10_wind_polar_1991-2020_ltm/v10_wind_polar_1991-2020_ltm.html)
-[[10 m wind speed (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/vmag10_wind_polar_1991-2020_ltm/vmag10_wind_polar_1991-2020_ltm.html)
+[[SLP & 10m winds]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/msl_sfcwind_globe_1991-2020_ltm/msl_sfcwind_globe_1991-2020_ltm.html)
+[[SLP & 10m winds (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/msl_sfcwind_polar_1991-2020_ltm/msl_sfcwind_polar_1991-2020_ltm.html)  
+[[U-component 10 m wind]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/u10_wind_globe_1991-2020_ltm/u10_wind_globe_1991-2020_ltm.html) 
+[[V-component 10 m wind]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/v10_wind_globe_1991-2020_ltm/v10_wind_globe_1991-2020_ltm.html)
+[[10 m wind speed]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/vmag10_wind_globe_1991-2020_ltm/vmag10_wind_globe_1991-2020_ltm.html)  
+[[U-component 10 m wind (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/u10_wind_polar_1991-2020_ltm/u10_wind_polar_1991-2020_ltm.html)
+[[V-component 10 m wind (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/v10_wind_polar_1991-2020_ltm/v10_wind_polar_1991-2020_ltm.html)
+[[10 m wind speed (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/vmag10_wind_polar_1991-2020_ltm/vmag10_wind_polar_1991-2020_ltm.html)
 
 *Upper-level*  
-[[500 hPa hgt & wind]](https://pages.uoregon.edu/climvis/content/maps/globe/z500_wind_globe_1991-2020_ltm/z500_wind_globe_1991-2020_ltm.html)
-[[500 hPa hgt & wind (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/z500_wind_polar_1991-2020_ltm/z500_wind_polar_1991-2020_ltm.html)
-[[500 hPa vertical velocity]](https://pages.uoregon.edu/climvis/content/maps/globe/w500_globe_1991-2020_ltm/w500_globe_1991-2020_ltm.html)   
-[[U-component 300 hPa wind]](https://pages.uoregon.edu/climvis/content/maps/globe/u300_wind_globe_1991-2020_ltm/u300_wind_globe_1991-2020_ltm.html) 
-[[V-component 300 hPa wind]](https://pages.uoregon.edu/climvis/content/maps/globe/v300_wind_globe_1991-2020_ltm/v300_wind_globe_1991-2020_ltm.html)
-[[300 hPa wind speed]](https://pages.uoregon.edu/climvis/content/maps/globe/vmag300_wind_globe_1991-2020_ltm/vmag300_wind_globe_1991-2020_ltm.html)  
-[[U-component 300 hPa wind (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/u300_wind_polar_1991-2020_ltm/u300_wind_polar_1991-2020_ltm.html)
-[[V-component 300 hPa wind (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/v300_wind_polar_1991-2020_ltm/v300_wind_polar_1991-2020_ltm.html)
-[[300 hPa wind speed (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/vmag300_wind_polar_1991-2020_ltm/vmag300_wind_polar_1991-2020_ltm.html)  
+[[500 hPa hgt & wind]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/z500_wind_globe_1991-2020_ltm/z500_wind_globe_1991-2020_ltm.html)
+[[500 hPa hgt & wind (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/z500_wind_polar_1991-2020_ltm/z500_wind_polar_1991-2020_ltm.html)
+[[500 hPa vertical velocity]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/w500_globe_1991-2020_ltm/w500_globe_1991-2020_ltm.html)   
+[[U-component 300 hPa wind]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/u300_wind_globe_1991-2020_ltm/u300_wind_globe_1991-2020_ltm.html) 
+[[V-component 300 hPa wind]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/v300_wind_globe_1991-2020_ltm/v300_wind_globe_1991-2020_ltm.html)
+[[300 hPa wind speed]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/vmag300_wind_globe_1991-2020_ltm/vmag300_wind_globe_1991-2020_ltm.html)  
+[[U-component 300 hPa wind (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/u300_wind_polar_1991-2020_ltm/u300_wind_polar_1991-2020_ltm.html)
+[[V-component 300 hPa wind (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/v300_wind_polar_1991-2020_ltm/v300_wind_polar_1991-2020_ltm.html)
+[[300 hPa wind speed (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/vmag300_wind_polar_1991-2020_ltm/vmag300_wind_polar_1991-2020_ltm.html)  
 
 *Meridional cross sections*   
-[[Zonal wind & meridional mass streamfunction]](https://pages.uoregon.edu/climvis/content/maps/xsect/zonal_xsect_1991-2020_ltm/zonal_xsect_1991-2020_ltm.html)
-[[Zonal wind and meridional mass streamfunction -- annual average]](https://pages.uoregon.edu/climvis/content/maps/xsect/zonal_xsect_1991-2020_ltm/png/zonal_xsect_1991-2020_ltm_ann.png)   
-[[Zonal wind & meridional mass streamfunction & vectors]](https://pages.uoregon.edu/climvis/content/maps/xsect/zonal_vec_xsect_1991-2020_ltm/zonal_vec_xsect_1991-2020_ltm.html)
-[[Zonal wind and meridional mass streamfunction & vectors -- annual average]](https://pages.uoregon.edu/climvis/content/maps/xsect/zonal_vec_xsect_1991-2020_ltm/png/zonal_vec_xsect_1991-2020_ltm_ann.png)   
-[[Zonal & meridional wind]](https://pages.uoregon.edu/climvis/content/maps/xsect/uv_xsect_1991-2020_ltm/uv_xsect_1991-2020_ltm.html)
-[[Zonal & meridional wind -- annual average]](https://pages.uoregon.edu/climvis/content/maps/xsect/uv_xsect_1991-2020_ltm/png/uv_xsect_1991-2020_ltm_ann.png)   
+[[Zonal wind & meridional mass streamfunction]](https://pages.uoregon.edu/climvis/content/anim/ltm/xsect/zonal_xsect_1991-2020_ltm/zonal_xsect_1991-2020_ltm.html)
+[[Zonal wind and meridional mass streamfunction -- annual average]](https://pages.uoregon.edu/climvis/content/anim/ltm/xsect/zonal_xsect_1991-2020_ltm/png/zonal_xsect_1991-2020_ltm_ann.png)   
+[[Zonal wind & meridional mass streamfunction & vectors]](https://pages.uoregon.edu/climvis/content/anim/ltm/xsect/zonal_vec_xsect_1991-2020_ltm/zonal_vec_xsect_1991-2020_ltm.html)
+[[Zonal wind and meridional mass streamfunction & vectors -- annual average]](https://pages.uoregon.edu/climvis/content/anim/ltm/xsect/zonal_vec_xsect_1991-2020_ltm/png/zonal_vec_xsect_1991-2020_ltm_ann.png)   
+[[Zonal & meridional wind]](https://pages.uoregon.edu/climvis/content/anim/ltm/xsect/uv_xsect_1991-2020_ltm/uv_xsect_1991-2020_ltm.html)
+[[Zonal & meridional wind -- annual average]](https://pages.uoregon.edu/climvis/content/anim/ltm/xsect/uv_xsect_1991-2020_ltm/png/uv_xsect_1991-2020_ltm_ann.png)   
 
 *Streamlines*  
-[[Surface (10m)]](https://pages.uoregon.edu/climvis/content/maps/globe/stream_10m_globe_1991-2020_ltm/stream_10m_globe_1991-2020_ltm.html)
-[[500 hPa]](https://pages.uoregon.edu/climvis/content/maps/globe/stream_500_globe_1991-2020_ltm/stream_500_globe_1991-2020_ltm.html)
-[[300 hPa]](https://pages.uoregon.edu/climvis/content/maps/globe/stream_300_globe_1991-2020_ltm/stream_300_globe_1991-2020_ltm.html)  
-[[Surface (10m) (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/stream_10m_polar_1991-2020_ltm/stream_10m_polar_1991-2020_ltm.html)
-[[500 hPa (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/stream_500_polar_1991-2020_ltm/stream_500_polar_1991-2020_ltm.html)
-[[300 hPa (polar)]](https://pages.uoregon.edu/climvis/content/maps/polar/stream_300_polar_1991-2020_ltm/stream_300_polar_1991-2020_ltm.html) 
+[[Surface (10m)]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/stream_10m_globe_1991-2020_ltm/stream_10m_globe_1991-2020_ltm.html)
+[[500 hPa]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/stream_500_globe_1991-2020_ltm/stream_500_globe_1991-2020_ltm.html)
+[[300 hPa]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/stream_300_globe_1991-2020_ltm/stream_300_globe_1991-2020_ltm.html)  
+[[Surface (10m) (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/stream_10m_polar_1991-2020_ltm/stream_10m_polar_1991-2020_ltm.html)
+[[500 hPa (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/stream_500_polar_1991-2020_ltm/stream_500_polar_1991-2020_ltm.html)
+[[300 hPa (polar)]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/stream_300_polar_1991-2020_ltm/stream_300_polar_1991-2020_ltm.html) 
  	
 Vertical velocity (omega) and the U and V components of the wind use the following sign convention:
 
@@ -88,81 +88,81 @@ Vertical velocity (omega) and the U and V components of the wind use the followi
 **Energy**
 
 *Atmospheric energy fluxes*  
-[[Total energy flux]](https://pages.uoregon.edu/climvis/content/maps/globe/uv_tef_vint_globe_1991-2020_ltm/uv_tef_vint_globe_1991-2020_ltm.html)
-[[Heat flux]](https://pages.uoregon.edu/climvis/content/maps/globe/uv_hf_vint_globe_1991-2020_ltm/uv_hf_vint_globe_1991-2020_ltm.html)
-[[Latent heat flux]](https://pages.uoregon.edu/climvis/content/maps/globe/uv_lh_vint_globe_1991-2020_ltm/uv_lh_vint_globe_1991-2020_ltm.html)
-[[Kinetic energy flux]](https://pages.uoregon.edu/climvis/content/maps/globe/uv_ke_vint_globe_1991-2020_ltm/uv_ke_vint_globe_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/globe/eflux_globe_1991-2020_ltm/eflux_globe_1991-2020_ltm.html)
+[[Total energy flux]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/uv_tef_vint_globe_1991-2020_ltm/uv_tef_vint_globe_1991-2020_ltm.html)
+[[Heat flux]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/uv_hf_vint_globe_1991-2020_ltm/uv_hf_vint_globe_1991-2020_ltm.html)
+[[Latent heat flux]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/uv_lh_vint_globe_1991-2020_ltm/uv_lh_vint_globe_1991-2020_ltm.html)
+[[Kinetic energy flux]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/uv_ke_vint_globe_1991-2020_ltm/uv_ke_vint_globe_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/eflux_globe_1991-2020_ltm/eflux_globe_1991-2020_ltm.html)
 (note the different scales)
 
 **Atmospheric moisture**
 
 *Moisture flux and water vapor*   
-[[Moisture-flux divergence]](https://pages.uoregon.edu/climvis/content/maps/globe/uqvq_divmf_globe_1991-2020_ltm/uqvq_divmf_globe_1991-2020_ltm.html)
-[[Vertically integrated moisture flux]](https://pages.uoregon.edu/climvis/content/maps/globe/uqvq_vmag_globe_1991-2020_ltm/uqvq_vmag_globe_1991-2020_ltm.html)
-[[vertically integrated water vapor]](https://pages.uoregon.edu/climvis/content/maps/globe/tcwv_globe_1991-2020_ltm/tcwv_globe_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/globe/mflux_globe_1991-2020_ltm/mflux_globe_1991-2020_ltm.html)  
-[[air temperature and specific humidity meridional cross section]](https://pages.uoregon.edu/climvis/content/maps/xsect/t_q_xsect_1991-2020_ltm/t_q_xsect_1991-2020_ltm.html)
-[[below 100 hPa]](https://pages.uoregon.edu/climvis/content/maps/xsect/t_q_xsect2_1991-2020_ltm/t_q_xsect2_1991-2020_ltm.html)
+[[Moisture-flux divergence]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/uqvq_divmf_globe_1991-2020_ltm/uqvq_divmf_globe_1991-2020_ltm.html)
+[[Vertically integrated moisture flux]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/uqvq_vmag_globe_1991-2020_ltm/uqvq_vmag_globe_1991-2020_ltm.html)
+[[vertically integrated water vapor]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tcwv_globe_1991-2020_ltm/tcwv_globe_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/mflux_globe_1991-2020_ltm/mflux_globe_1991-2020_ltm.html)  
+[[air temperature and specific humidity meridional cross section]](https://pages.uoregon.edu/climvis/content/anim/ltm/xsect/t_q_xsect_1991-2020_ltm/t_q_xsect_1991-2020_ltm.html)
+[[below 100 hPa]](https://pages.uoregon.edu/climvis/content/anim/ltm/xsect/t_q_xsect2_1991-2020_ltm/t_q_xsect2_1991-2020_ltm.html)
 
 **Global water balance/precipitation/snow**   
  
 *Precipitation controls*   
-[[vertically integrated water vapor]](https://pages.uoregon.edu/climvis/content/maps/globe/tcwv_globe_1991-2020_ltm/tcwv_globe_1991-2020_ltm.html) 
-[[500 hPa vertical velocity]](https://pages.uoregon.edu/climvis/content/maps/globe/w500_globe_1991-2020_ltm/w500_globe_1991-2020_ltm.html)
-[[total cloud cover]](https://pages.uoregon.edu/climvis/content/maps/globe/tcc_globe_1991-2020_ltm/tcc_globe_1991-2020_ltm.html)
-[[precipitation rate]](https://pages.uoregon.edu/climvis/content/maps/globe/tp_globe_1991-2020_ltm/tp_globe_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/globe/pctrl_globe_1991-2020_ltm/pctrl_globe_1991-2020_ltm.html)
+[[vertically integrated water vapor]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tcwv_globe_1991-2020_ltm/tcwv_globe_1991-2020_ltm.html) 
+[[500 hPa vertical velocity]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/w500_globe_1991-2020_ltm/w500_globe_1991-2020_ltm.html)
+[[total cloud cover]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tcc_globe_1991-2020_ltm/tcc_globe_1991-2020_ltm.html)
+[[precipitation rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tp_globe_1991-2020_ltm/tp_globe_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/pctrl_globe_1991-2020_ltm/pctrl_globe_1991-2020_ltm.html)
 
 *Precipitation and evaporation*   
-[[precipitation rate]](https://pages.uoregon.edu/climvis/content/maps/globe/tp_globe_1991-2020_ltm/tp_globe_1991-2020_ltm.html)
-[[evaporation rate]](https://pages.uoregon.edu/climvis/content/maps/globe/e_globe_1991-2020_ltm/e_globe_1991-2020_ltm.html)
-[[P - E]](https://pages.uoregon.edu/climvis/content/maps/globe/pme_globe_1991-2020_ltm/pme_globe_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/globe/pmeall_globe_1991-2020_ltm/pmeall_globe_1991-2020_ltm.html)
+[[precipitation rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tp_globe_1991-2020_ltm/tp_globe_1991-2020_ltm.html)
+[[evaporation rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/e_globe_1991-2020_ltm/e_globe_1991-2020_ltm.html)
+[[P - E]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/pme_globe_1991-2020_ltm/pme_globe_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/pmeall_globe_1991-2020_ltm/pmeall_globe_1991-2020_ltm.html)
 
 *Surface water balance*  
-[[precipitation rate]](https://pages.uoregon.edu/climvis/content/maps/globe/tp_globe_1991-2020_ltm/tp_globe_1991-2020_ltm.html)
-[[evaporation rate]](https://pages.uoregon.edu/climvis/content/maps/globe/e_globe_1991-2020_ltm/e_globe_1991-2020_ltm.html)
-[[runoff rate]](https://pages.uoregon.edu/climvis/content/maps/globe/ro_globe_1991-2020_ltm/ro_globe_1991-2020_ltm.html)
-[[&Delta;S]](https://pages.uoregon.edu/climvis/content/maps/globe/ds_globe_1991-2020_ltm/ds_globe_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/globe/swb_globe_1991-2020_ltm/swb_globe_1991-2020_ltm.html)
+[[precipitation rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/tp_globe_1991-2020_ltm/tp_globe_1991-2020_ltm.html)
+[[evaporation rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/e_globe_1991-2020_ltm/e_globe_1991-2020_ltm.html)
+[[runoff rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/ro_globe_1991-2020_ltm/ro_globe_1991-2020_ltm.html)
+[[&Delta;S]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/ds_globe_1991-2020_ltm/ds_globe_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/globe/swb_globe_1991-2020_ltm/swb_globe_1991-2020_ltm.html)
 
 *Snow*  
-[[snowfall rate]](https://pages.uoregon.edu/climvis/content/maps/polar/sf_polar_1991-2020_ltm/sf_polar_1991-2020_ltm.html)
-[[snowmelt rate]](https://pages.uoregon.edu/climvis/content/maps/polar/smlt_polar_1991-2020_ltm/smlt_polar_1991-2020_ltm.html)
-[[snow depth]](https://pages.uoregon.edu/climvis/content/maps/polar/sd_polar_1991-2020_ltm/sd_polar_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/polar/snow_polar_1991-2020_ltm/snow_polar_1991-2020_ltm.html)  
-[[precipitation rate]](https://pages.uoregon.edu/climvis/content/maps/polar/tp_polar_1991-2020_ltm/tp_polar_1991-2020_ltm.html)
-[[rainfall rate]](https://pages.uoregon.edu/climvis/content/maps/polar/rr_polar_1991-2020_ltm/rr_polar_1991-2020_ltm.html)
-[[snowfall rate]](https://pages.uoregon.edu/climvis/content/maps/polar/sf_polar_1991-2020_ltm/sf_polar_1991-2020_ltm.html)
-[[snow depth]](https://pages.uoregon.edu/climvis/content/maps/polar/sd_polar_1991-2020_ltm/sd_polar_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/polar/rain_snow_polar_1991-2020_ltm/rain_snow_polar_1991-2020_ltm.html)  
+[[snowfall rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/sf_polar_1991-2020_ltm/sf_polar_1991-2020_ltm.html)
+[[snowmelt rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/smlt_polar_1991-2020_ltm/smlt_polar_1991-2020_ltm.html)
+[[snow depth]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/sd_polar_1991-2020_ltm/sd_polar_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/snow_polar_1991-2020_ltm/snow_polar_1991-2020_ltm.html)  
+[[precipitation rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/tp_polar_1991-2020_ltm/tp_polar_1991-2020_ltm.html)
+[[rainfall rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/rr_polar_1991-2020_ltm/rr_polar_1991-2020_ltm.html)
+[[snowfall rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/sf_polar_1991-2020_ltm/sf_polar_1991-2020_ltm.html)
+[[snow depth]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/sd_polar_1991-2020_ltm/sd_polar_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/rain_snow_polar_1991-2020_ltm/rain_snow_polar_1991-2020_ltm.html)  
 
-[[snowfall rate]](https://pages.uoregon.edu/climvis/content/maps/polar/sf_polar30_1991-2020_ltm/sf_polar30_1991-2020_ltm.html) 
-[[snowmelt rate]](https://pages.uoregon.edu/climvis/content/maps/polar/smlt_polar30_1991-2020_ltm/smlt_polar30_1991-2020_ltm.html)
-[[snow depth]](https://pages.uoregon.edu/climvis/content/maps/polar/sd_polar30_1991-2020_ltm/sd_polar30_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/polar/snow_polar30_1991-2020_ltm/snow_polar30_1991-2020_ltm.html) (*poleward of 30&deg; N and S*)  
-[[precipitation rate]](https://pages.uoregon.edu/climvis/content/maps/polar/tp_polar30_1991-2020_ltm/tp_polar30_1991-2020_ltm.html)
-[[rainfall rate]](https://pages.uoregon.edu/climvis/content/maps/polar/rr_polar30_1991-2020_ltm/rr_polar30_1991-2020_ltm.html)
-[[snowfall rate]](https://pages.uoregon.edu/climvis/content/maps/polar/sf_polar30_1991-2020_ltm/sf_polar30_1991-2020_ltm.html)
-[[snow depth]](https://pages.uoregon.edu/climvis/content/maps/polar/sd_polar30_1991-2020_ltm/sd_polar30_1991-2020_ltm.html)
-[[all]](https://pages.uoregon.edu/climvis/content/maps/polar/rain_snow_polar30_1991-2020_ltm/rain_snow_polar30_1991-2020_ltm.html)
+[[snowfall rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/sf_polar30_1991-2020_ltm/sf_polar30_1991-2020_ltm.html) 
+[[snowmelt rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/smlt_polar30_1991-2020_ltm/smlt_polar30_1991-2020_ltm.html)
+[[snow depth]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/sd_polar30_1991-2020_ltm/sd_polar30_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/snow_polar30_1991-2020_ltm/snow_polar30_1991-2020_ltm.html) (*poleward of 30&deg; N and S*)  
+[[precipitation rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/tp_polar30_1991-2020_ltm/tp_polar30_1991-2020_ltm.html)
+[[rainfall rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/rr_polar30_1991-2020_ltm/rr_polar30_1991-2020_ltm.html)
+[[snowfall rate]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/sf_polar30_1991-2020_ltm/sf_polar30_1991-2020_ltm.html)
+[[snow depth]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/sd_polar30_1991-2020_ltm/sd_polar30_1991-2020_ltm.html)
+[[all]](https://pages.uoregon.edu/climvis/content/anim/ltm/polar/rain_snow_polar30_1991-2020_ltm/rain_snow_polar30_1991-2020_ltm.html)
 
-**ERA5-Land high-resolution maps for North America**
+**ERA5-Land high-resolution anim/ltm for North America**
 
-These maps show ERA5-Land data for selected variables.  The ERA5-Land data are on a 0.10-degree grid, and for comparison, ERA5 data on the 0.25-degree are included.
+These anim/ltm show ERA5-Land data for selected variables.  The ERA5-Land data are on a 0.10-degree grid, and for comparison, ERA5 data on the 0.25-degree are included.
 
 *North America*  
-[[2m air temperature, ERA5-Land]](https://pages.uoregon.edu/climvis/content/maps/namer_e5land/t2m_namer_e5land_1991-2020_ltm/t2m_namer_e5land_1991-2020_ltm.html) 
-[[2m air temperature, ERA5]](https://pages.uoregon.edu/climvis/content/maps/namer/t2m_namer_1991-2020_ltm/t2m_namer_1991-2020_ltm.html)   
-[[precipitation rate, ERA5-Land]](https://pages.uoregon.edu/climvis/content/maps/namer_e5land/tp_namer_e5land_1991-2020_ltm/tp_namer_e5land_1991-2020_ltm.html) 
-[[precipitation rate, ERA5]](https://pages.uoregon.edu/climvis/content/maps/namer/tp_namer_1991-2020_ltm/tp_namer_1991-2020_ltm.html)
+[[2m air temperature, ERA5-Land]](https://pages.uoregon.edu/climvis/content/anim/ltm/namer_e5land/t2m_namer_e5land_1991-2020_ltm/t2m_namer_e5land_1991-2020_ltm.html) 
+[[2m air temperature, ERA5]](https://pages.uoregon.edu/climvis/content/anim/ltm/namer/t2m_namer_1991-2020_ltm/t2m_namer_1991-2020_ltm.html)   
+[[precipitation rate, ERA5-Land]](https://pages.uoregon.edu/climvis/content/anim/ltm/namer_e5land/tp_namer_e5land_1991-2020_ltm/tp_namer_e5land_1991-2020_ltm.html) 
+[[precipitation rate, ERA5]](https://pages.uoregon.edu/climvis/content/anim/ltm/namer/tp_namer_1991-2020_ltm/tp_namer_1991-2020_ltm.html)
 
 *CONUS*  
-[[2m air temperature, ERA5-Land]](https://pages.uoregon.edu/climvis/content/maps/conus_e5land/t2m_conus_e5land_1991-2020_ltm/t2m_conus_e5land_1991-2020_ltm.html) 
-[[2m air temperature, ERA5]](https://pages.uoregon.edu/climvis/content/maps/conus/t2m_conus_1991-2020_ltm/t2m_conus_1991-2020_ltm.html)   
-[[precipitation rate, ERA5-Land]](https://pages.uoregon.edu/climvis/content/maps/conus_e5land/tp_conus_e5land_1991-2020_ltm/tp_conus_e5land_1991-2020_ltm.html) 
-[[precipitation rate, ERA5]](https://pages.uoregon.edu/climvis/content/maps/conus/tp_conus_1991-2020_ltm/tp_conus_1991-2020_ltm.html)
+[[2m air temperature, ERA5-Land]](https://pages.uoregon.edu/climvis/content/anim/ltm/conus_e5land/t2m_conus_e5land_1991-2020_ltm/t2m_conus_e5land_1991-2020_ltm.html) 
+[[2m air temperature, ERA5]](https://pages.uoregon.edu/climvis/content/anim/ltm/conus/t2m_conus_1991-2020_ltm/t2m_conus_1991-2020_ltm.html)   
+[[precipitation rate, ERA5-Land]](https://pages.uoregon.edu/climvis/content/anim/ltm/conus_e5land/tp_conus_e5land_1991-2020_ltm/tp_conus_e5land_1991-2020_ltm.html) 
+[[precipitation rate, ERA5]](https://pages.uoregon.edu/climvis/content/anim/ltm/conus/tp_conus_1991-2020_ltm/tp_conus_1991-2020_ltm.html)
 
 **Reanalysis Grid-point Elevations**
 
