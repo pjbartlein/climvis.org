@@ -1,0 +1,11 @@
+file_of_filenames = tcwv_globe_1991-2020_ltm_files.txt
+image_preserve=0,0,1200,40
+bottom_controls = startstop, step, firstlast, speed, zoom, setframe,
+bottom_controls_style = display:flex;flex-flow:row;
+bottom_controls_tooltip = Start/Stop, Back one/Forward one, First/Last, Loop faster/Loop slower, Zoom/Unzoom
+setframe_label =  
+setframe_label_style = font-family:monospace; font-size:16px; margin:12px;
+buttons_style = flex:auto; margin:1px; font-family:arial; font-size:12px; height:24px; border:1px solid #555555; display:inline-block; background-color: #e7e7e7;
+enable_smoothing = t
+start_looping = f
+dwell = 1000, 0, 2000, 100
