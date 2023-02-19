@@ -40,7 +40,7 @@ Energy-balance components follow the Sellers (1968) sign convention:
 [[2m air temperature (polar)]](../content/anim/ltm/polar/t2m_polar_1991-2020_ltm/t2m_polar_1991-2020_ltm.html)
 [[Surface net radiation & 2m air temp]](../content/anim/ltm/globe/t2m_snr_globe_1991-2020_ltm/t2m_snr_globe_1991-2020_ltm.html)  
 [[Skin temperature]](../content/anim/ltm/globe/skt_globe_1991-2020_ltm/skt_globe_1991-2020_ltm.html)
-[[2m air temperature - Skin temperature]](../content/anim/ltm/globe/t2m-skt_globe_1991-2020_ltm/t2m_skt_globe_1991-2020_ltm.html)
+[[2m air temperature - Skin temperature]](../content/anim/ltm/globe/t2m-skt_globe_1991-2020_ltm/t2m-skt_globe_1991-2020_ltm.html)
 
 **Atmospheric circulation & winds**  
 
