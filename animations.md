@@ -174,7 +174,7 @@ The scale of the climatic features that can be resolved by the reanalysis data d
 [[Globe]](../content/maps/elev/ERA5_elev_globe_clr.png) 
 [[Globe b&w]](../content/maps/elev/ERA5_elev_globe.png) 
 [[North America]](../content/maps/elev/ERA5_elev_namer_clr.png) 
-[[North America b&w]](../content/maps/elev/ERA5_elev_namer_clr.png) 
+[[North America b&w]](../content/maps/elev/ERA5_elev_namer.png) 
 [[CONUS]](../content/maps/elev/ERA5_elev_conus_clr.png)
 [[CONUS b&w]](../content/maps/elev/ERA5_elev_conus.png)
 
