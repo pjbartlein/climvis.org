@@ -129,6 +129,10 @@ Vertical velocity (omega) and the U and V components of the wind use the followi
 [[&Delta;S]](../content/anim/ltm/globe/ds_globe_1991-2020_ltm/ds_globe_1991-2020_ltm.html)
 [[all]](../content/anim/ltm/globe/swb_globe_1991-2020_ltm/swb_globe_1991-2020_ltm.html)
 
+*Relative humidity and vapor-pressure deficit*  
+[[relative humidity]](../content/anim/ltm/globe/rh_globe_1991-2020_ltm/rh_globe_1991-2020_ltm.html) 
+[[vapor-pressure deficit]](../content/anim/ltm/globe/vpd_globe_1991-2020_ltm/vpd_globe_1991-2020_ltm.html)
+
 *Snow*  
 [[snowfall rate]](../content/anim/ltm/polar/sf_polar_1991-2020_ltm/sf_polar_1991-2020_ltm.html)
 [[snowmelt rate]](../content/anim/ltm/polar/smlt_polar_1991-2020_ltm/smlt_polar_1991-2020_ltm.html)
