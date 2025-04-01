@@ -28,6 +28,6 @@ Values are long-term monthly means 1991 - 2020.
 
 [[ERA5-Land 2m air temperature & total precipitation]](../content/anim/ltm/nz/t2m_tp_nz_e5land_1991-2020_ltm/t2m_tp_nz_e5land_1991-2020_ltm.html)  
 [[ERA5-Land net shortwave and longwave radiation]](../content/anim/ltm/nz/ssr_str_nz_e5land_1991-2020_ltm/ssr_str_nz_e5land_1991-2020_ltm.html)  
-[[ERA5-Land sensible & latent heat flux]](../content/anim/ltm/nz/sshf_slhr_nz_e5land_1991-2020_ltm/sshf_slhf_nz_e5land_1991-2020_ltm.html)  
+[[ERA5-Land sensible & latent heat flux]](../content/anim/ltm/nz/sshf_slhf_nz_e5land_1991-2020_ltm/sshf_slhf_nz_e5land_1991-2020_ltm.html)  
 [[ERA5-Land surface net radiation & 2m air temperature]](../content/anim/ltm/nz/snr_t2m_nz_e5land_1991-2020_ltm/snr_t2m_nz_e5land_1991-2020_ltm.html)  
  
