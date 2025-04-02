@@ -4,6 +4,8 @@
 
 The ERA5-Land data are on a 0.1-degree grid (the ERA5 data are on a 0.25-degree grid).
 
+ERA4-Land Elevations [[b&w .png]](../content/maps/elev/ERA5-Land_elev_nz_b&w.png) [[b&w .pdf]](../content/maps/elev/ERA5-Land_elev_nz_b&w.pdf) [[color .png]](../content/maps/elev/ERA5-Land_elev_nz_clr.png) [[color .pdf]](../content/maps/elev/ERA5-Land_elev_nz_clr.pdf)
+
 Values are long-term monthly means 1991 - 2020.
 
 **Radiation, surface energy balance, and temperature**
