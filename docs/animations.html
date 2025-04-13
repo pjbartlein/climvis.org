@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Global Climate Animations</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="page_01.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">climvis.org</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Overview
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="introduction.html">Introduction</a>
+    </li>
+    <li>
+      <a href="datasources.html">Data sources</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Animations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="animations.html">Global</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Maps
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="maps.html">Climate maps</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Plots
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="hov.html">Hovmöller plots</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    About
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="acknowledgments.html">Acknowledgments</a>
+    </li>
+    <li>
+      <a href="about.html">About this page</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Global Climate Animations</h1>
+
+</div>
+
+
+<p>The maps on this page are based on data from the ERA5 and ERA5-Land
+Reanalysis data sets, were drawn using the NCAR Command Language (NCL)
+and animated using HAnis – the HTML5 Image AnimationS webapp. See the
+acknowledgments below. The data plotted are 1991-2020 long-term means.
+The resolution of the data behind the ERA5 global maps is 0.25 degrees,
+and 0.1 degrees for the ERA5-Land North America and CONUS maps. See the
+elevation maps below.</p>
+<p><strong>Global energy balance</strong></p>
+<p><em>Radiative components – Top of the Atmosphere (TOA)</em><br />
+<a
+href="../content/anim/ltm/globe/tisr_globe_1991-2020_ltm/tisr_globe_1991-2020_ltm.html">[Incident
+SW]</a> <a
+href="../content/anim/ltm/globe/tsru_globe_1991-2020_ltm/tsru_globe_1991-2020_ltm.html">[TOA
+SW up]</a> <a
+href="../content/anim/ltm/globe/tsr_globe_1991-2020_ltm/tsr_globe_1991-2020_ltm.html">[TOA
+net SW]</a> <a
+href="../content/anim/ltm/globe/toa_globe_1991-2020_ltm/toa_globe_1991-2020_ltm.html">[TOA
+down | TOA up | TOA net | Sfc net]</a></p>
+<p><em>Radiative components – Surface</em><br />
+<a
+href="../content/anim/ltm/globe/ssrd_globe_1991-2020_ltm/ssrd_globe_1991-2020_ltm.html">[SW
+down]</a> <a
+href="../content/anim/ltm/globe/ssru_globe_1991-2020_ltm/ssru_globe_1991-2020_ltm.html">[SW
+up]</a> <a
+href="../content/anim/ltm/globe/ssr_globe_1991-2020_ltm/ssr_globe_1991-2020_ltm.html">[SW
+net]</a> <a
+href="../content/anim/ltm/globe/ss_globe_1991-2020_ltm/ss_globe_1991-2020_ltm.html">[SW
+down | SW up | net SW]</a><br />
+<a
+href="../content/anim/ltm/globe/strd_globe_1991-2020_ltm/strd_globe_1991-2020_ltm.html">[LW
+down]</a> <a
+href="../content/anim/ltm/globe/stru_globe_1991-2020_ltm/stru_globe_1991-2020_ltm.html">[LW
+up]</a> <a
+href="../content/anim/ltm/globe/str_globe_1991-2020_ltm/str_globe_1991-2020_ltm.html">[LW
+net]</a> <a
+href="../content/anim/ltm/globe/st_globe_1991-2020_ltm/st_globe_1991-2020_ltm.html">[LW
+down | LW up | net LW]</a><br />
+<a
+href="../content/anim/ltm/globe/ssr_globe_1991-2020_ltm/ssr_globe_1991-2020_ltm.html">[net
+SW]</a> <a
+href="../content/anim/ltm/globe/str_globe_1991-2020_ltm/str_globe_1991-2020_ltm.html">[net
+LW]</a> <a
+href="../content/anim/ltm/globe/snr_globe_1991-2020_ltm/snr_globe_1991-2020_ltm.html">[net
+radiation]</a> <a
+href="../content/anim/ltm/globe/sn_globe_1991-2020_ltm/sn_globe_1991-2020_ltm.html">[net
+SW | net LW | net radiation]</a></p>
+<p><em>Non-radiative components</em><br />
+<a
+href="../content/anim/ltm/globe/sshf_globe_1991-2020_ltm/sshf_globe_1991-2020_ltm.html">[sensible
+heat flux]</a> <a
+href="../content/anim/ltm/globe/slhf_globe_1991-2020_ltm/slhf_globe_1991-2020_ltm.html">[latent
+heat flux]</a> <a
+href="../content/anim/ltm/globe/sghf_globe_1991-2020_ltm/sghf_globe_1991-2020_ltm.html">[substrate
+heat flux/change in storage]</a> <a
+href="../content/anim/ltm/globe/shf_globe_1991-2020_ltm/shf_globe_1991-2020_ltm.html">[all]</a></p>
+<p>Energy-balance components follow the Sellers (1968) sign
+convention:</p>
+<ul>
+<li>radiative fluxes (e.g. net radiation): energy flow toward the
+surface is positive (orange); energy flow away is negative (blue);<br />
+</li>
+<li>non-radiative fluxes (e.g. latent heat flux): energy flow from the
+surface toward the atmosphere is positive (orange); energy flow from the
+atmosphere toward the surface is negative (blue);<br />
+</li>
+<li>substrate heat flux/change in storage: energy flow from the
+subsurface to the atmosphere (i.e. out of storage) is positive (orange);
+energy flow from the surface toward the subsurface (i.e. into storage)
+is negative (blue).)</li>
+</ul>
+<p><strong>Temperature</strong></p>
+<p><a
+href="../content/anim/ltm/globe/t2m_globe_1991-2020_ltm/t2m_globe_1991-2020_ltm.html">[2m
+air temperature]</a> <a
+href="../content/anim/ltm/polar/t2m_polar_1991-2020_ltm/t2m_polar_1991-2020_ltm.html">[2m
+air temperature (polar)]</a> <a
+href="../content/anim/ltm/globe/t2m_snr_globe_1991-2020_ltm/t2m_snr_globe_1991-2020_ltm.html">[Surface
+net radiation &amp; 2m air temp]</a><br />
+<a
+href="../content/anim/ltm/globe/skt_globe_1991-2020_ltm/skt_globe_1991-2020_ltm.html">[Skin
+temperature]</a> <a
+href="../content/anim/ltm/globe/t2m-skt_globe_1991-2020_ltm/t2m-skt_globe_1991-2020_ltm.html">[2m
+air temperature - Skin temperature]</a></p>
+<p><strong>Atmospheric circulation &amp; winds</strong></p>
+<p><em>Surface</em><br />
+<a
+href="../content/anim/ltm/globe/msl_sfcwind_globe_1991-2020_ltm/msl_sfcwind_globe_1991-2020_ltm.html">[SLP
+&amp; 10m winds]</a> <a
+href="../content/anim/ltm/polar/msl_sfcwind_polar_1991-2020_ltm/msl_sfcwind_polar_1991-2020_ltm.html">[SLP
+&amp; 10m winds (polar)]</a><br />
+<a
+href="../content/anim/ltm/globe/u10_wind_globe_1991-2020_ltm/u10_wind_globe_1991-2020_ltm.html">[U-component
+10 m wind]</a> <a
+href="../content/anim/ltm/globe/v10_wind_globe_1991-2020_ltm/v10_wind_globe_1991-2020_ltm.html">[V-component
+10 m wind]</a> <a
+href="../content/anim/ltm/globe/vmag10_wind_globe_1991-2020_ltm/vmag10_wind_globe_1991-2020_ltm.html">[10
+m wind speed]</a><br />
+<a
+href="../content/anim/ltm/polar/u10_wind_polar_1991-2020_ltm/u10_wind_polar_1991-2020_ltm.html">[U-component
+10 m wind (polar)]</a> <a
+href="../content/anim/ltm/polar/v10_wind_polar_1991-2020_ltm/v10_wind_polar_1991-2020_ltm.html">[V-component
+10 m wind (polar)]</a> <a
+href="../content/anim/ltm/polar/vmag10_wind_polar_1991-2020_ltm/vmag10_wind_polar_1991-2020_ltm.html">[10
+m wind speed (polar)]</a></p>
+<p><em>Upper-level</em><br />
+<a
+href="../content/anim/ltm/globe/z500_wind_globe_1991-2020_ltm/z500_wind_globe_1991-2020_ltm.html">[500
+hPa hgt &amp; wind]</a> <a
+href="../content/anim/ltm/polar/z500_wind_polar_1991-2020_ltm/z500_wind_polar_1991-2020_ltm.html">[500
+hPa hgt &amp; wind (polar)]</a> <a
+href="../content/anim/ltm/globe/w500_globe_1991-2020_ltm/w500_globe_1991-2020_ltm.html">[500
+hPa vertical velocity]</a><br />
+<a
+href="../content/anim/ltm/globe/u300_wind_globe_1991-2020_ltm/u300_wind_globe_1991-2020_ltm.html">[U-component
+300 hPa wind]</a> <a
+href="../content/anim/ltm/globe/v300_wind_globe_1991-2020_ltm/v300_wind_globe_1991-2020_ltm.html">[V-component
+300 hPa wind]</a> <a
+href="../content/anim/ltm/globe/vmag300_wind_globe_1991-2020_ltm/vmag300_wind_globe_1991-2020_ltm.html">[300
+hPa wind speed]</a><br />
+<a
+href="../content/anim/ltm/polar/u300_wind_polar_1991-2020_ltm/u300_wind_polar_1991-2020_ltm.html">[U-component
+300 hPa wind (polar)]</a> <a
+href="../content/anim/ltm/polar/v300_wind_polar_1991-2020_ltm/v300_wind_polar_1991-2020_ltm.html">[V-component
+300 hPa wind (polar)]</a> <a
+href="../content/anim/ltm/polar/vmag300_wind_polar_1991-2020_ltm/vmag300_wind_polar_1991-2020_ltm.html">[300
+hPa wind speed (polar)]</a></p>
+<p><em>Meridional cross sections</em><br />
+<a
+href="../content/anim/ltm/xsect/zonal_xsect_1991-2020_ltm/zonal_xsect_1991-2020_ltm.html">[Zonal
+wind &amp; meridional mass streamfunction]</a> <a
+href="../content/anim/ltm/xsect/zonal_xsect_1991-2020_ltm/png/zonal_xsect_1991-2020_ltm_ann.png">[Zonal
+wind and meridional mass streamfunction – annual average]</a><br />
+<a
+href="../content/anim/ltm/xsect/zonal_vec_xsect_1991-2020_ltm/zonal_vec_xsect_1991-2020_ltm.html">[Zonal
+wind &amp; meridional mass streamfunction &amp; vectors]</a> <a
+href="../content/anim/ltm/xsect/zonal_vec_xsect_1991-2020_ltm/png/zonal_vec_xsect_1991-2020_ltm_ann.png">[Zonal
+wind and meridional mass streamfunction &amp; vectors – annual
+average]</a><br />
+<a
+href="../content/anim/ltm/xsect/uv_xsect_1991-2020_ltm/uv_xsect_1991-2020_ltm.html">[Zonal
+&amp; meridional wind]</a> <a
+href="../content/anim/ltm/xsect/uv_xsect_1991-2020_ltm/png/uv_xsect_1991-2020_ltm_ann.png">[Zonal
+&amp; meridional wind – annual average]</a></p>
+<p><em>Streamlines</em><br />
+<a
+href="../content/anim/ltm/globe/stream_10m_globe_1991-2020_ltm/stream_10m_globe_1991-2020_ltm.html">[Surface
+(10m)]</a> <a
+href="../content/anim/ltm/globe/stream_500_globe_1991-2020_ltm/stream_500_globe_1991-2020_ltm.html">[500
+hPa]</a> <a
+href="../content/anim/ltm/globe/stream_300_globe_1991-2020_ltm/stream_300_globe_1991-2020_ltm.html">[300
+hPa]</a><br />
+<a
+href="../content/anim/ltm/polar/stream_10m_polar_1991-2020_ltm/stream_10m_polar_1991-2020_ltm.html">[Surface
+(10m) (polar)]</a> <a
+href="../content/anim/ltm/polar/stream_500_polar_1991-2020_ltm/stream_500_polar_1991-2020_ltm.html">[500
+hPa (polar)]</a> <a
+href="../content/anim/ltm/polar/stream_300_polar_1991-2020_ltm/stream_300_polar_1991-2020_ltm.html">[300
+hPa (polar)]</a></p>
+<p>Vertical velocity (omega) and the U and V components of the wind use
+the following sign convention:</p>
+<ul>
+<li>omega, sinking is positive (orange), rising is negative (blue)</li>
+<li>U component, positive toward the east (blue), negative toward the
+west (red);</li>
+<li>V component, positive toward the north (blue), negative toward the
+south (red)</li>
+</ul>
+<p><strong>Energy</strong></p>
+<p><em>Atmospheric energy fluxes</em><br />
+<a
+href="../content/anim/ltm/globe/uv_tef_vint_globe_1991-2020_ltm/uv_tef_vint_globe_1991-2020_ltm.html">[Total
+energy flux]</a> <a
+href="../content/anim/ltm/globe/uv_hf_vint_globe_1991-2020_ltm/uv_hf_vint_globe_1991-2020_ltm.html">[Heat
+flux]</a> <a
+href="../content/anim/ltm/globe/uv_lh_vint_globe_1991-2020_ltm/uv_lh_vint_globe_1991-2020_ltm.html">[Latent
+heat flux]</a> <a
+href="../content/anim/ltm/globe/uv_ke_vint_globe_1991-2020_ltm/uv_ke_vint_globe_1991-2020_ltm.html">[Kinetic
+energy flux]</a> <a
+href="../content/anim/ltm/globe/eflux_globe_1991-2020_ltm/eflux_globe_1991-2020_ltm.html">[all]</a>
+(note the different scales)</p>
+<p><strong>Atmospheric moisture</strong></p>
+<p><em>Moisture flux and water vapor</em><br />
+<a
+href="../content/anim/ltm/globe/uqvq_divmf_globe_1991-2020_ltm/uqvq_divmf_globe_1991-2020_ltm.html">[Moisture-flux
+divergence]</a> <a
+href="../content/anim/ltm/globe/uqvq_vmag_globe_1991-2020_ltm/uqvq_vmag_globe_1991-2020_ltm.html">[Vertically
+integrated moisture flux]</a> <a
+href="../content/anim/ltm/globe/tcwv_globe_1991-2020_ltm/tcwv_globe_1991-2020_ltm.html">[vertically
+integrated water vapor]</a> <a
+href="../content/anim/ltm/globe/mflux_globe_1991-2020_ltm/mflux_globe_1991-2020_ltm.html">[all]</a><br />
+<a
+href="../content/anim/ltm/xsect/t_q_xsect_1991-2020_ltm/t_q_xsect_1991-2020_ltm.html">[air
+temperature and specific humidity meridional cross section]</a> <a
+href="../content/anim/ltm/xsect/t_q_xsect2_1991-2020_ltm/t_q_xsect2_1991-2020_ltm.html">[below
+100 hPa]</a></p>
+<p><strong>Global water balance/precipitation/snow</strong></p>
+<p><em>Precipitation controls</em><br />
+<a
+href="../content/anim/ltm/globe/tcwv_globe_1991-2020_ltm/tcwv_globe_1991-2020_ltm.html">[vertically
+integrated water vapor]</a> <a
+href="../content/anim/ltm/globe/w500_globe_1991-2020_ltm/w500_globe_1991-2020_ltm.html">[500
+hPa vertical velocity]</a> <a
+href="../content/anim/ltm/globe/tcc_globe_1991-2020_ltm/tcc_globe_1991-2020_ltm.html">[total
+cloud cover]</a> <a
+href="../content/anim/ltm/globe/tp_globe_1991-2020_ltm/tp_globe_1991-2020_ltm.html">[precipitation
+rate]</a> <a
+href="../content/anim/ltm/globe/pctrl_globe_1991-2020_ltm/pctrl_globe_1991-2020_ltm.html">[all]</a></p>
+<p><em>Precipitation and evaporation</em><br />
+<a
+href="../content/anim/ltm/globe/tp_globe_1991-2020_ltm/tp_globe_1991-2020_ltm.html">[precipitation
+rate]</a> <a
+href="../content/anim/ltm/globe/e_globe_1991-2020_ltm/e_globe_1991-2020_ltm.html">[evaporation
+rate]</a> <a
+href="../content/anim/ltm/globe/pme_globe_1991-2020_ltm/pme_globe_1991-2020_ltm.html">[P
+- E]</a> <a
+href="../content/anim/ltm/globe/pmeall_globe_1991-2020_ltm/pmeall_globe_1991-2020_ltm.html">[all]</a></p>
+<p><em>Surface water balance</em><br />
+<a
+href="../content/anim/ltm/globe/tp_globe_1991-2020_ltm/tp_globe_1991-2020_ltm.html">[precipitation
+rate]</a> <a
+href="../content/anim/ltm/globe/e_globe_1991-2020_ltm/e_globe_1991-2020_ltm.html">[evaporation
+rate]</a> <a
+href="../content/anim/ltm/globe/ro_globe_1991-2020_ltm/ro_globe_1991-2020_ltm.html">[runoff
+rate]</a> <a
+href="../content/anim/ltm/globe/ds_globe_1991-2020_ltm/ds_globe_1991-2020_ltm.html">[ΔS]</a>
+<a
+href="../content/anim/ltm/globe/swb_globe_1991-2020_ltm/swb_globe_1991-2020_ltm.html">[all]</a></p>
+<p><em>Relative humidity and vapor-pressure deficit</em><br />
+<a
+href="../content/anim/ltm/globe/rh_globe_1991-2020_ltm/rh_globe_1991-2020_ltm.html">[relative
+humidity]</a> <a
+href="../content/anim/ltm/globe/vpd_globe_1991-2020_ltm/vpd_globe_1991-2020_ltm.html">[vapor-pressure
+deficit]</a></p>
+<p><em>Snow</em><br />
+<a
+href="../content/anim/ltm/polar/sf_polar_1991-2020_ltm/sf_polar_1991-2020_ltm.html">[snowfall
+rate]</a> <a
+href="../content/anim/ltm/polar/smlt_polar_1991-2020_ltm/smlt_polar_1991-2020_ltm.html">[snowmelt
+rate]</a> <a
+href="../content/anim/ltm/polar/sd_polar_1991-2020_ltm/sd_polar_1991-2020_ltm.html">[snow
+depth]</a> <a
+href="../content/anim/ltm/polar/snow_polar_1991-2020_ltm/snow_polar_1991-2020_ltm.html">[all]</a><br />
+<a
+href="../content/anim/ltm/polar/tp_polar_1991-2020_ltm/tp_polar_1991-2020_ltm.html">[precipitation
+rate]</a> <a
+href="../content/anim/ltm/polar/rr_polar_1991-2020_ltm/rr_polar_1991-2020_ltm.html">[rainfall
+rate]</a> <a
+href="../content/anim/ltm/polar/sf_polar_1991-2020_ltm/sf_polar_1991-2020_ltm.html">[snowfall
+rate]</a> <a
+href="../content/anim/ltm/polar/sd_polar_1991-2020_ltm/sd_polar_1991-2020_ltm.html">[snow
+depth]</a> <a
+href="../content/anim/ltm/polar/rain_snow_polar_1991-2020_ltm/rain_snow_polar_1991-2020_ltm.html">[all]</a></p>
+<p><a
+href="../content/anim/ltm/polar/sf_polar30_1991-2020_ltm/sf_polar30_1991-2020_ltm.html">[snowfall
+rate]</a> <a
+href="../content/anim/ltm/polar/smlt_polar30_1991-2020_ltm/smlt_polar30_1991-2020_ltm.html">[snowmelt
+rate]</a> <a
+href="../content/anim/ltm/polar/sd_polar30_1991-2020_ltm/sd_polar30_1991-2020_ltm.html">[snow
+depth]</a> <a
+href="../content/anim/ltm/polar/snow_polar30_1991-2020_ltm/snow_polar30_1991-2020_ltm.html">[all]</a>
+(<em>poleward of 30° N and S</em>)<br />
+<a
+href="../content/anim/ltm/polar/tp_polar30_1991-2020_ltm/tp_polar30_1991-2020_ltm.html">[precipitation
+rate]</a> <a
+href="../content/anim/ltm/polar/rr_polar30_1991-2020_ltm/rr_polar30_1991-2020_ltm.html">[rainfall
+rate]</a> <a
+href="../content/anim/ltm/polar/sf_polar30_1991-2020_ltm/sf_polar30_1991-2020_ltm.html">[snowfall
+rate]</a> <a
+href="../content/anim/ltm/polar/sd_polar30_1991-2020_ltm/sd_polar30_1991-2020_ltm.html">[snow
+depth]</a> <a
+href="../content/anim/ltm/polar/rain_snow_polar30_1991-2020_ltm/rain_snow_polar30_1991-2020_ltm.html">[all]</a></p>
+<p><strong>ERA5-Land high-resolution anim/ltm for North
+America</strong></p>
+<p>These anim/ltm show ERA5-Land data for selected variables. The
+ERA5-Land data are on a 0.10-degree grid, and for comparison, ERA5 data
+on the 0.25-degree are included.</p>
+<p><em>North America</em><br />
+<a
+href="../content/anim/ltm/namer_e5land/t2m_namer_e5land_1991-2020_ltm/t2m_namer_e5land_1991-2020_ltm.html">[2m
+air temperature, ERA5-Land]</a> <a
+href="../content/anim/ltm/namer/t2m_namer_1991-2020_ltm/t2m_namer_1991-2020_ltm.html">[2m
+air temperature, ERA5]</a><br />
+<a
+href="../content/anim/ltm/namer_e5land/tp_namer_e5land_1991-2020_ltm/tp_namer_e5land_1991-2020_ltm.html">[precipitation
+rate, ERA5-Land]</a> <a
+href="../content/anim/ltm/namer/tp_namer_1991-2020_ltm/tp_namer_1991-2020_ltm.html">[precipitation
+rate, ERA5]</a></p>
+<p><em>CONUS</em><br />
+<a
+href="../content/anim/ltm/conus_e5land/t2m_conus_e5land_1991-2020_ltm/t2m_conus_e5land_1991-2020_ltm.html">[2m
+air temperature, ERA5-Land]</a> <a
+href="../content/anim/ltm/conus/t2m_conus_1991-2020_ltm/t2m_conus_1991-2020_ltm.html">[2m
+air temperature, ERA5]</a><br />
+<a
+href="../content/anim/ltm/conus_e5land/tp_conus_e5land_1991-2020_ltm/tp_conus_e5land_1991-2020_ltm.html">[precipitation
+rate, ERA5-Land]</a> <a
+href="../content/anim/ltm/conus/tp_conus_1991-2020_ltm/tp_conus_1991-2020_ltm.html">[precipitation
+rate, ERA5]</a></p>
+<p><strong>Reanalysis Grid-point Elevations</strong></p>
+<p>The scale of the climatic features that can be resolved by the
+reanalysis data depends on the resolution of the models. For the ERA5
+data, the resolution is 0.25 degrees, and for the ERA5-Land data, the
+resolution is 0.10 degrees. In both cases, real “landscape-scale”
+features that are of smaller spatial scale will not be resolved by the
+data, or visible on the maps on this page.</p>
+<p><em>ERA5 (0.25-degree)</em><br />
+<a href="../content/maps/elev/ERA5_elev_globe_clr.png">[Globe]</a> <a
+href="../content/maps/elev/ERA5_elev_globe.png">[Globe b&amp;w]</a> <a
+href="../content/maps/elev/ERA5_elev_namer_clr.png">[North America]</a>
+<a href="../content/maps/elev/ERA5_elev_namer.png">[North America
+b&amp;w]</a> <a
+href="../content/maps/elev/ERA5_elev_conus_clr.png">[CONUS]</a> <a
+href="../content/maps/elev/ERA5_elev_conus.png">[CONUS b&amp;w]</a></p>
+<p><em>ERA5-Land (0.25-degree)</em> <a
+href="../content/maps/elev/ERA5-Land_elev_globe_clr.png">[Globe]</a> <a
+href="../content/maps/elev/ERA5-Land_elev_globe.png">[Globe b&amp;w]</a>
+<a href="../content/maps/elev/ERA5-Land_elev_namer_clr.png">[North
+America]</a> <a
+href="../content/maps/elev/ERA5-Land_elev_namer.png">[North America
+b&amp;w]</a> <a
+href="../content/maps/elev/ERA5-Land_elev_conus_clr.png">[CONUS]</a> <a
+href="../content/maps/elev/ERA5-Land_elev_conus.png">[CONUS
+b&amp;w]</a></p>
+<p><strong>Acknowledgements</strong></p>
+<p><em>Data sources</em></p>
+<p>The global data plotted here are from the ECMWF fifth-generation ERA5
+Reanalysis: <a
+href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-pressure-levels-monthly-means">[ERA5
+monthly averaged data on pressure levels from 1979 to present]</a> and
+<a
+href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means">[ERA5
+monthly averaged data on single levels from 1979 to present]</a></p>
+<p>The results contain modified Copernicus Climate Change Service
+information 2021. Neither the European Commission nor ECMWF is
+responsible for any use that may be made of the Copernicus information
+or data it contains.</p>
+<p>Hersbach, H., Bell, B., Berrisford, P., Biavati, G., Horányi, A.,
+Muñoz Sabater, J., Nicolas, J., Peubey, C., Radu, R., Rozum, I.,
+Schepers, D., Simmons, A., Soci, C., Dee, D., Thépaut, J-N. (2019): ERA5
+monthly averaged data on single levels from 1979 to present. Copernicus
+Climate Change Service (C3S) Climate Data Store (CDS). (Accessed on
+27-Dec-2021), <a
+href="https://doi.org/10.24381/cds.f17050d7">[https://doi.org/10.24381/cds.f17050d7]</a></p>
+<p>Hans Hersbach, Bill Bell, Paul Berrisford, Shoji Hirahara, András
+Horányi, Joaquín Muñoz-Sabater, Julien Nicolas, Carole Peubey, Raluca
+Radu, Dinand Schepers, Adrian Simmons, Cornel Soci, Saleh Abdalla,
+Xavier Abellan, Gianpaolo Balsamo, Peter Bechtold, Gionata Biavati, Jean
+Bidlot, Massimo Bonavita, Giovanna De Chiara, Per Dahlgren, Dick Dee,
+Michail Diamantakis, Rossana Dragani, Johannes Flemming, Richard Forbes,
+Manuel Fuentes, Alan Geer, Leo Haimberger, Sean Healy, Robin J. Hogan,
+Elías Hólm, Marta Janisková, Sarah Keeley, Patrick Laloyaux, Philippe
+Lopez, Cristina Lupu, Gabor Radnoti, Patricia de Rosnay, Iryna Rozum,
+Freja Vamborg, Sebastien Villaume, Jean-Noël Thépaut (2020) The ERA5
+global reanalysis. <em>Quarterly Journal of the Royal Meteorological
+Society</em> 146:1999-2049. <a
+href="https://doi.org/10.1002/qj.3803">[https://doi.org/10.1002/qj.3803]</a></p>
+<p>Regional data are from the ERA5-Land Reanalysis Data set: <a
+href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land-monthly-means">[ERA5-Land
+monthly averaged data from 1950 to present]</a>.</p>
+<p>The results contain modified Copernicus Climate Change Service
+information 2021. Neither the European Commission nor ECMWF is
+responsible for any use that may be made of the Copernicus information
+or data it contains.</p>
+<p>Muñoz Sabater, J., (2021): ERA5-Land monthly averaged data from 1950
+to 1980. Copernicus Climate Change Service (C3S) Climate Data Store
+(CDS). (Accessed on 11-Mar-2022), <a
+href="https://doi.org/10.24381/cds.68d2bb30">[https://doi.org/10.24381/cds.68d2bb30]</a>.</p>
+<p>J. Muñoz-Sabater, Dutra, E., Agustí-Panareda, A., Albergel, C.,
+Arduini, G., Balsamo, G., Boussetta, S., Choulga, M., Harrigan, S.,
+Hersbach, H., Martens, B., Miralles, D. G., Piles, M.,
+Rodríguez-Fernández, N. J., Zsoter, E., Buontempo, C., and Thépaut,
+J.-N.: ERA5-Land: A state-of-the-art global reanalysis dataset for land
+applications, <em>Earth Syst. Sci. Data</em>, 13:4349–4383, 2021. <a
+href="https://doi.org/10.5194/essd-13-4349-2021">[https://doi.org/10.5194/essd-13-4349-2021]</a>.</p>
+<p><em>Maps</em></p>
+<p>Maps were created using the NCAR Command Language (NCL) <a
+href="https://www.ncl.ucar.edu">[https://www.ncl.ucar.edu]</a> The NCAR
+Command Language (Version 6.6.2) [Software]. (2019). Boulder, Colorado:
+UCAR/NCAR/CISL/TDD. <a href="http://dx.doi.org/10.5065/D6WD3XH5"
+class="uri">http://dx.doi.org/10.5065/D6WD3XH5</a></p>
+<p>Shapefiles for the continental outlines and administrative units on
+the ERA5-Land maps were downloaded from Natural Earth <a
+href="https://www.naturalearthdata.com">[https://www.naturalearthdata.com]</a></p>
+<p><em>Animations</em></p>
+<p>The animations were created using HAnis – the HTML5 Image AnimationS
+webapp <a
+href="https://www.ssec.wisc.edu/hanis/">[https://www.ssec.wisc.edu/hanis/]</a>
+by Tom Whittaker, Space Science and Engineering Center, University of
+Wisconsin–Madison.</p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

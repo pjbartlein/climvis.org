@@ -1,0 +1,12 @@
+png/e_globe_1991-2020_ltm_12.png
+png/e_globe_1991-2020_ltm_01.png 
+png/e_globe_1991-2020_ltm_02.png 
+png/e_globe_1991-2020_ltm_03.png 
+png/e_globe_1991-2020_ltm_04.png 
+png/e_globe_1991-2020_ltm_05.png 
+png/e_globe_1991-2020_ltm_06.png 
+png/e_globe_1991-2020_ltm_07.png 
+png/e_globe_1991-2020_ltm_08.png 
+png/e_globe_1991-2020_ltm_09.png 
+png/e_globe_1991-2020_ltm_10.png 
+png/e_globe_1991-2020_ltm_11.png 
