@@ -1,0 +1,3 @@
+#! /bin/bash
+pwd
+/opt/homebrew/Cellar/netcdf/4.9.0/bin/ncdump -c $1

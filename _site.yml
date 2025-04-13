@@ -1,0 +1,39 @@
+name: climvis.org
+navbar:
+  title: 	"climvis.org"
+  left:
+  - text: Overview
+    menu:
+    - text: Introduction
+      href: introduction.html
+    - text: Data sources
+      href: datasources.html
+  - text: Animations
+    menu:
+    - text: Global
+      href: animations.html
+  - text: Maps
+    menu:
+    - text: Climate maps 
+      href: maps.html
+  - text: Plots
+    menu:
+    - text:  Hovmöller plots
+      href:  hov.html
+  - text: About
+    menu:
+    - text: Acknowledgments
+      href: acknowledgments.html
+    - text: About this page
+      href: about.html
+       
+output:
+  html_document:
+    theme: cerulean
+    highlight: haddock
+    css: page_01.css
+    lib_dir: site_libs
+    self_contained: no
+    output_dir: "./docs/"
+output_dir: docs
+

@@ -1,0 +1,299 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><style type="text/css">body, td {
+   font-family: Times, TimesNewRoman, serif;
+   background-color: white;
+   font-size: 11pt;
+   margin: 40px;
+   width:  720px;
+   text-align:justify;
+}
+
+tt, code, pre {
+   font-family: Consolas, Monaco, monospace;
+   font-size: 10pt;
+   font-weight: bolder;
+}
+
+h1 {
+   font-family: Hevetica, Arial, sans-serif;
+   font-size:16pt;
+   font-weight: normal;
+}
+
+h2 {
+   font-size:16pt;
+   font-weight: normal;
+}
+
+h3 {
+   font-size:14pt;
+   font-weight: normal;
+}
+
+h4 {
+   font-size:14pt;
+   font-weight: normal;
+   font-style: italic;
+}
+
+h5 {
+   font-size:12pt;
+   font-weight: normal;
+}
+
+h6 {
+   font-size:12pt;
+   font-weight: normal;
+   font-style: italic;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre { 
+   margin-top: 0;
+   max-width: 100%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+   background-color:  #E0E0E0;
+}
+
+code.r, code.noeval, code.cpp {
+   background-color: #eeeeee;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#000000;
+   margin:0;
+   padding-left: 1em;
+   padding-right: 1em;
+   border-left: 0.5em #E0E0E0 solid;
+   border-right: 0.5em #E0E0E0 solid
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+
+</style>
+</head><body><h1 id="workflowformakingananimation">Workflow for making an animation</h1>
+
+<p>Example: Make animations of skin temperature (T<sub>s</sub>) and of 2-m air temperature - skin temperature (T2m - T<sub>s</sub>)</p>
+
+<p>Basic layout of files and folders:</p>
+
+<ol>
+<li>A big data folder(s) for storing downloaded data and calculated values like long-term means and anomalies. This folder will be too large to sync at GitHub.</li>
+<li>A working folder with processed data files, NCL scripts, other scripts and so on, including a folder for completed maps. This folder should be a GitHub repository (e.g. <code>climvis-figs</code>)</li>
+<li>A working folder with the Markdown, R Markdown and various other files and folders that make up the web page (e.g. the Bootstrap <code>/site-libs</code> folder and the HAniS support files. This should also be a GitHub repository (e.g. <code>climvis.org</code>) and is copied to <code>http://pages.uoregon.edu/clivis/</code> (<code>climvis.org</code>)</li>
+</ol>
+
+<p>Overall steps:</p>
+
+<ol>
+<li>download data (monthly time series).</li>
+<li>calculate new variables (e.g. T2m - T<sub>s</sub>), if necessary.</li>
+<li>calculate long-term means and anomalies (Anomaly calculation isn&#8217;t really necessary, but it&#8217;s efficient to do at this stage).</li>
+<li>copy the resulting long-term means to <code>/climvis-figs/data/ERA5-Atm/ltm_monthly/</code></li>
+<li>edit and run an ncl script to make the maps</li>
+<li>use the ImageMagick <code>mogrify</code> command-line tool to trim whitespace from the maps. (NCL always writes to a square page.)</li>
+<li>edit the three HAniS support files: <code>varname.html</code>, <code>varname_config.txt</code>, and `varname_files.txt'.</li>
+<li>using FileZilla or by mounting the folder on the server, copy the <code>/png</code> folder and HAniS support files to
+<code>sftp.uoregon.edu/climvis/public_html/content/anim/ltm/globe/varname/...</code><br />
+(user: <code>climvis</code> password: <code>GCA_2023_Sedge</code>)</li>
+<li>test by loading <code>https://climvis.org/global/varname/varname.html</code></li>
+<li>Editing the appropriate Markdown file (e.g. <code>animations.md</code>) and &#8220;knitting&#8221; it to <code>.html' in R Studio via an R Markdown file  (e.g.</code> annimations.Rmd`) (Or, when major changes are made, rebuilding the web site in R Studio.)</li>
+<li>copy the updated/rebuilt website <code>.html</code> and support files to the server.</li>
+</ol>
+
+<p><em>Some debugging of the following will be necessary.</em></p>
+
+<h2 id="data">Data</h2>
+
+<h3 id="downloaddata">Download data</h3>
+
+<p>Before downloading data, you&#8217;ll need to get an CDS account. The first time through, the web page should prompt you to set one up.</p>
+
+<p>Here&#8217;s the URL for the ERA5 monthly-averaged data on single levels:<br />
+<a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview">[https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview]</a>.</p>
+
+<p>Click on the <code>Download Data</code> tab, and make the following selections:</p>
+
+<ul>
+<li>Product type: <code>Monthly averaged reanalysis</code></li>
+<li>Variable: <code>Skin temperature</code></li>
+<li>Year: <code>Select all</code> (or just through 2020, to match the existing data).</li>
+<li>Month: <code>Select all</code></li>
+<li>Time: <code>00:00</code> (the only possible selection for Monthly averaged reanalysis data)</li>
+<li>Geographical area: <code>Whole available region</code></li>
+<li>Format: <code>NetCDF</code></li>
+</ul>
+
+<p>Click on the green button. When the data are ready, you&#8217;ll see a Download data button. The file will have a cryptic name, but you can discover the name of the variable, <code>skt</code> in this case, using Panoply or <code>ncdump</code>. Rename the file to, for example, <code>ERA5_skt_monthly_197901-202012.nc</code>. Move the file to the &#8220;big data&#8221; folder(s).</p>
+
+<h3 id="getlong-termmeansandanomalies">Get long-term means and anomalies</h3>
+
+<p>Getting the long-term means, 1991&#8211;2020, for example, is easy to do with a combination of CDO and NCO command-line commands. Open a terminal window in the folder with the downloaded data, and paste in the following:</p>
+
+<pre><code>cdo selyear,1991/2020 ERA5_skt_monthly_197901-202012.nc ERA5_skt_monthly_199101-202012.nc
+cdo ymonmean ERA5_skt_monthly_199101-202012.nc ERA5_skt_monthly_199101-202012_ltm.nc
+cdo -b F64 sub ERA5_skt_monthly_197901-202012.nc ERA5_skt_monthly_199101-202012_ltm.nc ERA5_skt_monthly_197901-202012_anm1991-2020.nc 
+ncpdq -O ERA5_skt_monthly_197901-202012_anm1991-2020.nc ERA5_skt_monthly_197901-202012_anm1991-2020.nc 
+</code></pre>
+
+<p>The first line grabs a subset of years (1991&#8211;2020) from the downloaded file, the second line gets the long-term means for that subset, the third line gets the anomalies, and the fourth line repacks the anomalies (to &#8220;short&#8221; netCDF variables). There are more scripts in the file <code>/climvis-figs/scripts/cdo-and-nco/cdo_ltm&amp;anm_ERA5-Atm.txt</code> Move the long-term mean file <code>ERA5_skt_monthly_199101-202012_ltm.nc</code> to the <code>/climvis-figs/data/ERA5-Atm/ltm_monthly</code> folder.</p>
+
+<h3 id="calculateanewvariable">Calculate a new variable</h3>
+
+<p>Get a new variable, in this case the 2m air temperature minus the skin temperature. This can be done in NCL, but is easy to do in CDO and NCO:</p>
+
+<pre><code>cdo -b F64 sub ERA5_t2m_monthly_197901-202012.nc ERA5_skt_monthly_197901-202012.nc ERA5_t2m-skt_monthly_197901-202012.nc 
+ncpdq -O ERA5_t2m-skt_monthly_197901-202012.nc ERA5_t2m-skt_monthly_197901-202012.nc 
+ncrename -v t2m,t2m-skt ERA5_t2m-skt_monthly_197901-202012.nc
+ncatted -a long_name,t2m-skt,o,c,&quot;2m Air Temp - Skin Temp&quot; ERA5_t2m-skt_monthly_197901-202012.nc
+ncatted -a standard_name,t2m-skt,o,c,&quot;T2m-TS&quot; ERA5_t2m-skt_monthly_197901-202012.nc
+</code></pre>
+
+<p>The first line subtracts <code>skt</code> from <code>t2m</code>, the second line repacks the difference, the third line renames <code>t2m</code> which got propagated to the difference file to <code>t2m-skt</code>, and the fourth and fifth lines add new long and standard names for <code>t2m-skt</code>. Next, get the long-term means and anomalies of <code>t2m-skt</code> as above.</p>
+
+<h2 id="maps">Maps</h2>
+
+<h3 id="createfoldersincontent">Create folder(s) in <code>/content</code></h3>
+
+<p>The animations consist of a folder of <code>.png</code> files, and three HAniS control files. Create the following folders and subfolders, e.g. for <code>skt</code>: <code>../climvis-figs/content/anim/ltm/globe/skt_globe_1991-2020_ltm/png</code>, and create a similar one for <code>t2m-skt</code>.</p>
+
+<h3 id="editannclfile">Edit an NCL file</h3>
+
+<p>Most of the time, an existing NCL script can be edited to create the maps for a new variable. For example, to plot <code>skt</code>, it&#8217;s possible to simply edit the NCL script for <code>t2m</code>: <code>t2m_glrob.ncl</code> (Note: <code>glrob</code> stands for a map of the globe using the Robinson projection. Because only the file and variable names will differ (the same color scale will be used), only line 3 and line 6 in the following would need to be changed. (Note that the line numbers are not part of the file.)</p>
+
+<pre><code>01: ; 1-up plot of a scalar variable
+02:
+03: mapvar = &quot;skt&quot;
+04: data_path = &quot;../../data/ERA5-Atm/ltm_monthly/&quot;
+05: map_path = &quot;../../maps/global/&quot; + mapvar + &quot;_globe_1991-2020_ltm/png/&quot;
+06: title_0 = &quot;Skin Temperature (~S~o~N~C~N~)&quot;
+07: title_2 = &quot;Data: ERA5 Reanalysis&quot;
+08: title_3 = &quot;1991-2020 Long-Term Mean&quot;
+09: ...
+</code></pre>
+
+<p>Line 44 in this file could also be changed from the comment <code>; 2m air temperature</code> to <code>; skin temperature</code></p>
+
+<p>For plotting <code>t2m-skt</code>, the same color scale will be used, but different outpoints will need to be specified. (See below for color-scale selection.). Two additional sections of code will need to be changed:</p>
+
+<pre><code>33: plotvar = plotvar
+</code></pre>
+
+<p>(removing the <code>- 273.15</code> that converted the input <code>t2m</code> data from Kelvin to deg C), and</p>
+
+<pre><code>44: ; 2m - skin temperature difference
+45: level0 = new((/ 15 /), float)
+46: level0 = (/-10, -5, -2, -1, -0.5, -0.2, -0.1, 0, 0.1, 0.2, 0.5, 1, 2, 5, 10 /)
+47: level0_begclr = 238
+48: level0_endclr = 253
+</code></pre>
+
+<p>Only line 44 and 46 were changed in this code chunk, to change the comment and to specify a pseudo-logarithmic scale. There are 15 cutpoints, and 16 colors (numbers 238 through 253) specified here. (The old outpoints for <code>t2m</code>were <code>level0 = (/-35, -30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35 /)</code>)</p>
+
+<h3 id="runthenclfile">Run the NCL file</h3>
+
+<p>If you&#8217;re using SublimeText on a Mac, typing cmd-b will save and run the file. Otherwise, save the file, open a command window in the <code>../climvis-figs/ncl/ncl_maps/</code> folder, and type for example, <code>ncl skt_glrob.ncl</code>.</p>
+
+<h3 id="trimthe.pngfiles">Trim the <code>.png</code> files</h3>
+
+<p>NCL plots things into a square &#8220;viewport&#8221;, which would leave a lot of white space around the maps. This can be trimmed (chopped) using the ImageMagick <code>mogrify</code> command (see <code>../climvis-figs/scripts/imagemagick/</code> for scripts for other map types. Open a command window in a <code>/png</code> folder (e.g. <code>../climvis-figs/content/anim/ltm/globe/t2m-skt_globe_1991-2020_ltm/png</code>) and copy in the following:</p>
+
+<pre><code>mogrify -gravity South -chop 0x260 *.png 
+mogrify -gravity North -chop 0x220 *.png
+</code></pre>
+
+<p>(This takes a few seconds, and the command prompt may come back before all of the file are done.)</p>
+
+<h3 id="editthehanissupportfiles">Edit the HAniS support files</h3>
+
+<p>There are three text files that HAniS uses to serve the <code>.pngs</code> as an animation, and <code>.html</code> file that is displayed in the browser, a configuration file, <code>*_config.txt</code>, and a list of files that make up the animation, <code>*_files.txt</code>. Copy these from an existing variable&#8217;s folder into, e.g. <code>../climvis-figs/content/anim/ltm/globe/skt_globe_1991-2020_ltm</code> and rename them appropriately, e.g. to <code>skt_globe_1991-2020_ltm.html</code>.</p>
+
+<p>In the <code>.html</code> file, line 6, the title, and line 20, the reference to the configuration file should be changed to e.g. <code>&lt;title&gt;ERA5 Skin Temperature 1991-2020&lt;/title&gt;</code> and <code>onload=&quot;HAniS.setup('skt_globe_1991-2020_ltm_config.txt','handiv')&quot;&gt;</code>k respectively..</p>
+
+<p>In the <code>*_config.txt</code> file, line 1, the reference to the file of filenames should be changed to e.g. <code>file_of_filenames = skt_globe_1991-2020_ltm_files.txt</code>.</p>
+
+<p>In the file of filenames, the individual file names should be change to reference the files in the <code>/png</code> subfolder, e.g.</p>
+
+<h3 id="copythefilestotheserver">Copy the files to the server</h3>
+
+<p>Copy the files to the server (i.e, to <code>pages.uoregon.edu/climvis/private_html/content/</code>). If using FileZilla, the following Site Manager information should work:</p>
+
+<pre><code>Protocol: SFTP - SSH File Transfer Protocol
+Host: sftp.uoreogn.edu
+Logon Type: Normal
+User: climvis
+Password: GCA_2023_Sedge
+</code></pre>
+
+<p>Browse to the folder <code>/home2/climvis/public_html/content/anim/ltm/globe</code> and copy the folder <code>../climvis-figs/content/anim/ltm/globe/skt_globe_1991-2020_ltm/</code> to the server.</p>
+
+<h3 id="testtheanimation">Test the animation</h3>
+
+<p>In a browser, enter the URL <code>https://pages.uoregon.edu/climvis/content/anim/ltm/globe/skt_globe_1991-2020_ltm/</code> and click on the <code>skt_globe_1991-2020_ltm.html</code> link.</p>
+
+<h2 id="website">Web site</h2>
+
+<p>The next step in adding or updating animations or plots is to work on the website. The website is built in R Studio using R Markdown, using a &#8220;Bootstrap theme&#8221; to implement the dropdown menus and overall design of the page. See <a href="https://bookdown.org/yihui/rmarkdown/">[https://bookdown.org/yihui/rmarkdown/]</a>. In addition to a few support files that don&#8217;t change often, the individual pages on the website are built from a Markdown file (e.g. <code>animations.md</code>) that contains text and links to the the animation <code>.html</code> file (e.g. 'skt_globe_1991&#8211;2020_ltm.html`) and a related R Markdown file (e.g. <code>animations.Rmd</code>) that refers to the Markdown file, and is &#8220;knitted&#8221; in R Studio to create an <code>.html</code> file that can be copied to the website, and also to update the structure of the website.</p>
+
+<h3 id="markdownfiles">Markdown files</h3>
+
+<p>Markdown files are just text files with some very simple formatting tags embedded (e.g. *a word or phrase* gets rendered as <em>a word or phrase</em>, or ** subhead ** gets rendered as <strong>subhead</strong>). Links to <code>.html</code> files on a server are constructed like this: [[climvis.org]](https://climvis.org), and when rendered appear as <a href="https://climvis.org">[climvis.org]</a>. The outer pair of square brackets delimits the link that appears on a page (and the inner pair appears as part of the link), while the parentheses delimit the URL.</p>
+
+<p>&#8220;Rendering&#8221; is done by a Markdown conversion program, which reads the text file and converts it to an <code>.html</code> file (or <code>.pdf</code>, <code>.docx</code>, etc.). See <a href="https://www.markdownguide.org/">https://www.markdownguide.org/</a>.</p>
+
+<p>So Markdown files can be constructed in a text editor, or in the editor in R Studio. In practice, it&#8217;s easiest to use a dual-pane dedicated Markdown editor that provides a live preview. Examples are:</p>
+
+<ul>
+<li><a href="https://multimarkdown.com/">[MultiMarkdownComposer]</a>, macOS, get from Mac .app store, probably the best one for the Mac;</li>
+<li><a href="https://macdown.uranusjr.com/">[Macdown]</a>, macOS, free, but has an annoying tendency to &#8220;flicker&#8221; when one is typing; and</li>
+<li><a href="http://markdownpad.com/news/2013/introducing-markdownpad-2/">[MarkdownPad 2]</a>, the best one for Windows.</li>
+</ul>
+
+<p>All three editors have a built-in Markdown rendering program, and can use a custom <code>.css</code> file to format the html a particular way (e.g. fonts and font-sizes, width of page, etc.). The <code>.css</code> file used here is <code>page_01.css</code> which is one of the support files that gets uploaded to the server.</p>
+
+<h3 id="addinganewanimationorimageeditingamarkdownfile">Adding a new animation or image (editing a Markdown file)</h3>
+
+<p>The two new animations can be added to the Animations page by using a Markdown editor (or text editor), and adding two links. The temperature section of the <code>animations.md</code> would then look like this:</p>
+
+<pre><code>**Temperature**  
+
+[[2m air temperature]](../content/anim/ltm/globe/t2m_globe_1991-2020_ltm/t2m_globe_1991-2020_ltm.html) 
+[[2m air temperature (polar)]](../content/anim/ltm/polar/t2m_polar_1991-2020_ltm/t2m_polar_1991-2020_ltm.html)
+[[Surface net radiation &amp; 2m air temp]](../content/anim/ltm/globe/t2m_snr_globe_1991-2020_ltm/t2m_snr_globe_1991-2020_ltm.html)  
+[[Skin temperature]](../content/anim/ltm/globe/skt_globe_1991-2020_ltm/skt_globe_1991-2020_ltm.html)
+[[2m air temperature - Skin temperature]](../content/anim/ltm/globe/t2m-skt_globe_1991-2020_ltm/t2m-skt_globe_1991-2020_ltm.html)
+</code></pre>
+
+<p>Save the edited Markdown file as usual.</p>
+
+<h3 id="renderingthemarkdownfileandupdatingthewebsite">Rendering the Markdown file and updating the website</h3>
+
+<p>The next step is to render the Markdown file in R Studio, turning it into an <code>.html</code> file that can be uploaded to the website. Here are the steps:</p>
+
+<ol>
+<li>Open R Studio in the <code>climvis.org</code> folder&#8211;this can conveniently be done by double-clicking on the <code>clmvis.org.Rproj</code> project file.</li>
+<li>Open the associated R Markdown file, i.e. <code>animations.Rmd</code> for rendering the <code>animations.md</code> file just made above. The R Markdown file contains some header information, plus a reference to the Markdown file <code>(```{r child=&quot;animations.md&quot;}</code>).</li>
+<li>&#8220;knit&#8221; (render) the file by clicking on the <code>Knit</code> button in R Studio. It might take a few seconds for the preview image of the rendered <code>.html</code> file to appear.</li>
+<li>As currently set up, this will create the file <code>animations.html</code> in the <code>/climvis.org/docs/</code> folder.</li>
+<li>Copy the <code>.html</code> file to <code>pages.uoregon.edu/climvis/private_html/</code>.</li>
+<li>Update the GitHub repository by committing and pushing the changed file.</li>
+</ol>
+</body></html>

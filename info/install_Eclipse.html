@@ -1,0 +1,595 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><style type="text/css">/*
+  Github style for nvUltra by Brett Terpstra and Fletcher Penney
+*/
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  padding: 50px !important;
+  margin: 10px `0px;
+  border: 1px solid #ccc;
+}
+
+body:before {
+  content: "";
+  display: table
+}
+
+body:after {
+  content: "";
+  display: table
+}
+
+body>:first-child {
+  margin-top: 0 !important
+}
+
+body>:last-child {
+  margin-bottom: 0 !important
+}
+
+a:not([href]) {
+  color: inherit;
+  text-decoration: none
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline-width: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+blockquote, details, dl, ol, p, pre, table, ul {
+  margin-bottom: 16px;
+  margin-top: 0
+}
+
+hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0
+}
+
+blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em
+}
+
+blockquote>:first-child {
+  margin-top: 0
+}
+
+blockquote>:last-child {
+  margin-bottom: 0
+}
+
+kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px
+}
+
+h1:hover .anchor .octicon-link, h2:hover .anchor .octicon-link, h3:hover .anchor .octicon-link, h4:hover .anchor .octicon-link, h5:hover .anchor .octicon-link, h6:hover .anchor .octicon-link {
+  visibility: visible
+}
+
+h1 code, h1 tt, h2 code, h2 tt, h3 code, h3 tt, h4 code, h4 tt, h5 code, h5 tt, h6 code, h6 tt {
+  font-size: inherit
+}
+
+h1 {
+  font-size: 2em
+}
+
+h1, h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em
+}
+
+h2 {
+  font-size: 1.5em
+}
+
+h3 {
+  font-size: 1.25em
+}
+
+h4 {
+  font-size: 1em
+}
+
+h5 {
+  font-size: .875em
+}
+
+h6 {
+  color: #6a737d;
+  font-size: .85em
+}
+
+ol, ul {
+  padding-left: 2em
+}
+
+ol ol, ol ul, ul ol, ul ul {
+  margin-bottom: 0;
+  margin-top: 0
+}
+
+li {
+  word-wrap: break-all
+}
+
+li>p {
+  margin-top: 16px
+}
+
+li+li {
+  margin-top: .25em
+}
+
+dl {
+  padding: 0
+}
+
+dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0
+}
+
+dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px
+}
+
+table {
+  display: block;
+  overflow: auto;
+  width: 100%
+}
+
+table th {
+  font-weight: 600
+}
+
+table td, table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px
+}
+
+table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1
+}
+
+table tr:nth-child(2n) {
+  background-color: #f6f8fa
+}
+
+table img {
+  background-color: transparent
+}
+
+img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%
+}
+
+img[align=right] {
+  padding-left: 20px
+}
+
+img[align=left] {
+  padding-right: 20px
+}
+
+.emoji {
+  background-color: transparent;
+  max-width: none;
+  vertical-align: text-top
+}
+
+code, tt {
+  background-color: rgba(27, 31, 35, .05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em
+}
+
+code br, tt br {
+  display: none
+}
+
+del code {
+  text-decoration: inherit
+}
+
+pre {
+  word-wrap: normal
+}
+
+pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal
+}
+
+.highlight {
+  margin-bottom: 16px
+}
+
+.highlight pre {
+  margin-bottom: 0;
+  word-break: normal
+}
+
+.highlight pre, pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal
+}
+
+/*
+  CriticMarkup CSS by Fletcher T. Penney
+
+  Shows CSS tricks to improve visibility of CriticMarkup output
+*/
+del {
+  background: #fae6e6;
+}
+
+ins {
+  background: #ecfce6;
+}
+
+span.critic.comment {
+  color: #0000bb;
+}
+
+span.critic.comment::before {
+  content: "{>> ";
+}
+
+span.critic.comment::after {
+  content: " <<}";
+}
+</style>
+</head><body><h1 id="runninggfortranwithnetcdfusingeclipseonmacos--applesilicon">Running gfortran with netCDF using Eclipse on MacOS &#8211; Apple Silicon</h1>
+
+<h2 id="installhomebrew">Install Homebrew</h2>
+
+<p>Homebrew is at <a href="https://brew.sh">https://brew.sh</a></p>
+
+<p>Paste the following (or whatever is current on the Homebrew web page) into a Terminal window.</p>
+
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+
+<p>If already installed, update Homebrew (see <a href="https://github.com/Homebrew/brew/blob/master/docs/FAQ.md">https://github.com/Homebrew/brew/blob/master/docs/FAQ.md</a>):</p>
+
+<pre><code>brew update
+brew upgrade
+brew cleanup
+</code></pre>
+
+<h2 id="installgccincludinggfortran">Install gcc (including gfortran)</h2>
+
+<p>The GCC compilers are at <a href="https://formulae.brew.sh/formula/gcc#default">https://formulae.brew.sh/formula/gcc#default</a></p>
+
+<p>If a previous version of netCDF from Homebrew didn&#8217;t install gcc as a dependency, or if netCDF was already installed, but not gcc, then install gcc as follows:</p>
+
+<pre><code>brew install gcc
+</code></pre>
+
+<p>The current version (as of 1 May 2029) is <code>13.1.0</code>. Note that a number of dependency packages will also be installed.</p>
+
+<p>Homebrew will select the right version (e.g. Big Sur, Monterey, or Ventura)</p>
+
+<p>If gcc was installed previously, attempt to upgrade it:</p>
+
+<pre><code>brew upgrade gcc
+</code></pre>
+
+<p>If gcc is already installed, you’ll get a message like:</p>
+
+<p><code>Warning: gcc 13.1.0 is already installed.</code></p>
+
+<p>If there is another version of <code>gcc</code> installed, say, <code>gcc-7.3.0</code>, installed while installing NCL, then the Homebrew version should be referenced as <code>gcc-13</code>. Typing <code>gcc-13 -v</code> or <code>gfortran-13 -v</code> will provide the version information for the Homebrew version.</p>
+
+<h2 id="installeclipseideforscientificcomputing">Install Eclipse IDE for Scientific Computing</h2>
+
+<p>The Eclipse IDE that supports Fortran is known as the Eclipse IDE for Scientific Computing. (It used to be known variously as Parallel Tools Platform with Photran, or Eclipse for Parallel Application Developers. Note also: The recent &#8220;Photon&#8221; version of the IDE (4.8.0, June 2018), is not the same as &#8220;Photran&#8221; the older name for the Fortran project).</p>
+
+<p>You may need to first install a Java Developer kit, if one does not already exist, although the current version of the installer, <code>2023-03</code>, indicates that it includes a Java RTE. If it appears necessary to install one, see:</p>
+
+<ul>
+<li><a href="https://www.oracle.com/java/technologies/javase-downloads.html">https://www.oracle.com/java/technologies/javase-downloads.html</a></li>
+</ul>
+
+<h3 id="eclipseinstaller">Eclipse Installer</h3>
+
+<p>The Eclipse Installer provides a convenient way of installing the Eclipse Development Environment and the Eclipse IDE for Scientific Computing (both are required). The installer is described at:</p>
+
+<ul>
+<li><a href="https://www.eclipse.org/downloads/packages/installer">https://www.eclipse.org/downloads/packages/installer</a></li>
+</ul>
+
+<p>Download the Eclipse Installer and click on the downloaded image file <code>eclipse-inst-jre-mac64.dmg</code> and run the <code>Eclipse Installer.app</code> that appears.</p>
+
+<p>The installer provides a scrolling list of packages. Scroll down and select <code>Eclipse for Scientific Computing</code> and click on <code>Install</code>. Accept the licenses and certificates. Installation takes a little while, and there may be messages warning about installation taking longer than usual. Accept the certificates, and launch Eclipse when installation is done.</p>
+
+<p>The Fortran Development User Guide for the current release of Eclipse (2023&#8211;03, as of 1 May 2023) is at: <a href="https://help.eclipse.org/2023-03/">https://help.eclipse.org/2023&#8211;03/</a></p>
+
+<h3 id="setup">Set up</h3>
+
+<p>When Eclipse is run for the first time, there will be some set up to do.</p>
+
+<p>Select a directory as a workspace. It proposed <code>/Users/bartlein/eclipse-workspace</code>, which seems fine, and check the button to use that as the default.</p>
+
+<p>A welcome screen will appear, with various shortcuts and tutorials. They are probably of more use after playing with Eclipse for a while that right away. You can proceed right to the &#8220;workbench&#8221; (i.e. the GUI) by clicking on the orange button in the upper right.</p>
+
+<h3 id="updatingeclipse">Updating Eclipse</h3>
+
+<p>Once Eclipse is set up, it can be updated using its <code>Help</code> menu.</p>
+
+<h2 id="newprojectexample">New Project Example</h2>
+
+<p>An illustrative example is to create a project <code>test_netcdf</code> that reads a file of long-term means of 20th Century Reanalysis data. Here&#8217;s a typical file structure, in this example, in my <code>/Users/bartlein/Projects/</code> folder.</p>
+
+<pre><code>/20CRA
+	/data
+		/ltms
+	/f90
+		/main_programs
+		/modules
+	/project_templates
+		/netcdf_openmp_project
+	/workspace
+		/test_netcdf
+		/test_netcdf_openmp 
+</code></pre>
+
+<p>The resulting intermediate and executable files for this example will appear in <code>/workspace/test_netcdf</code>.<br />
+The folder <code>/project_templates/netcdf_openmp_project</code> contains a project with the various settings already set, which can be used to create a new project by importing it into Eclipse and adding source files. (This will be explained later&#8211;see below.)</p>
+
+<h3 id="creatinganewfortranproject">Creating a new Fortran project</h3>
+
+<p>Start Eclipse, and in the <code>Select directory as workspace...</code> dialog, browse to the <code>/20CRA/workspace/</code> folder. This folder may ultimately contain multiple projects.</p>
+
+<p>There are two ways to create a new project:</p>
+
+<ol>
+<li>Click on <code>File</code> &gt; <code>New</code> &gt; <code>Project</code>, click on <code>Fortran</code>, and click on <code>Fortran Project</code>, or</li>
+<li>Right-click in the Project Explorer window, click on <code>New</code> &gt; <code>Fortran Project</code></li>
+</ol>
+
+<p>In the <code>Project name</code> field, type <code>test_netcdf</code>, uncheck <code>Use default location</code> tab, and browse to the folder <code>../20CRA/workspace/test_netcdf</code> and click on <code>Open</code>.</p>
+
+<p>Then in the <code>Project type</code> window, click on <code>Executable (Gnu Fortran on MacOS X</code>), and click on the <code>Next</code> button.</p>
+
+<p>The first time through, a dialog box will open, stating <code>Open the Fortran perspective?</code> Click on the <code>Remember my decision</code> check box, and then click on <code>Open Perspective</code>. This adds some Fortran-specific buttons to the toolbar and some windows.</p>
+
+<p>The <code>Project Explorer</code> window should now contain a <code>test_netcdf</code> entry. You can expose the <code>Project Explorer</code> window by clicking on <code>Window &gt; Show View &gt; Project Explorer</code>.</p>
+
+<h3 id="settheproperties">Set the properties</h3>
+
+<p>Either right-click on <code>test_netcdf</code> in the <code>Project Explorer</code> window, and click <code>Properties</code>, or use the Eclipse menu <code>Project &gt; Properties</code>. A properties page will open.</p>
+
+<h4 id="fortranbuildenvironment">Fortran Build Environment</h4>
+
+<p>Click on <code>Fortran Build</code> and then <code>Environment</code>. On the <code>Configuration</code> field, select <code>[All configurations]</code> This is important&#8211;if <code>Debug</code> or <code>Release</code> is selected, the changes will apply only to that configuration, and not both.</p>
+
+<p>Add the current path. The path can be obtained by typing in a Terminal window:</p>
+
+<pre><code>echo $PATH
+</code></pre>
+
+<p>which will return something like (be sure to type the dollar sign):</p>
+
+<p><code>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</code></p>
+
+<p>Click on <code>Add…</code> and in the <code>Name</code> field, enter <code>PATH</code>, and in the <code>Value</code> field, add the current path. Click on <code>Apply</code> (not the highlighted <code>Apply and Close</code>!)</p>
+
+<h4 id="fortranbuildsettings">Fortran Build Settings</h4>
+
+<p>Click on Settings under Fortran Build. On the first panel, again for <code>[All configurations]</code>, add the following to the Command field: <code>-fopenmp -ffree-line-length-160 -Wno-tabs</code>, so that the field looks like:</p>
+
+<pre><code>gfortran -fopenmp -ffree-line-length-160 -Wno-tabs 
+</code></pre>
+
+<p>The switch <code>-fopenmp</code> enables OpenMP, <code>-ffree-line-length-160</code> increases the line length, and <code>-Wno-tabs</code> suppresses the tab warnings.</p>
+
+<p>Then click on the <code>Directories</code> “folder” under <code>GNU Fortran Compiler</code>. Make sure [All configurations] is selected. Use the green add button to add the following include directory paths:</p>
+
+<pre><code>/usr/local/Cellar/netcdf-fortran/4.6.0/include
+/usr/local/Cellar/netcdf-fortran/4.6.0/lib
+</code></pre>
+
+<p>(Note that, whenever netCDF is updated, the specific folder name where netCDF resides (<code>/4.9.2</code>) will have to be changed to match the current version.</p>
+
+<p>Next, on the <code>Optimization</code> folder, select <code>Optimize most (-O3)</code> if OpenMP is being used.</p>
+
+<p>Next on <code>Fortran Build</code>, <code>Settings</code>, click on <code>MacOS X Fortran Linker</code> and on the Libraries folder.</p>
+
+<ul>
+<li><p>In the upper Libraries (-l) pane, add <code>netcdff</code> and <code>gomp</code></p></li>
+<li><p>In the lower Library search path (-L) pane, add <code>/usr/local/Cellar/netcdf/4.9.0/lib</code></p></li>
+<li><p>(Note the two <code>f</code>&#8217;s in <code>netcdff</code>.)</p></li>
+</ul>
+
+<p>On macOS Big Sur and later, the path to the <code>lSystem</code> library is sometimes not set correctly, so you may need to add the following to the library search path: <code>/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib</code>. Keep checking to see that the settings are being applied to <code>[All Configurations]</code>.</p>
+
+<p>Click on <code>Apply and Close</code>. The <code>Includes</code> entry under <code>test_netcdf</code> in the Project Explorer window should now be populated with paths to a number of different folders.</p>
+
+<h3 id="addcode">Add code</h3>
+
+<p>There are several ways to add source code (<code>*.f90</code> files) to a project. If the code does not exist, and will be composed here, click on the <code>New Fortran Source File</code> button on the toolbar, or with <code>test_netcdf</code> selected in the <code>Project Explorer</code> right-click, and click on <code>New</code> and <code>Fortran Source File</code>. However, the better way to add new code, is to create a file in, for example, the <code>../f90/main_programs/</code> folder, and then drag into the Projects pane in Eclipse, dropping it onto the project name. This will create a link to that file, as opposed to creating the file in the <code>/workspace</code> folder. This is particularly helpful in reducing the proliferation of modules.</p>
+
+<p>Here we&#8217;re going to add the existing files <code>test_01.f90</code> the main program and <code>netCDF_subs.f90</code> a module of subroutines. The easiest way to do that is to browse to each files in a file manager (<code>Finder</code>), copy the file, switch to Eclipse, select <code>test_netcdf</code> in the <code>Project Explorer</code> window, right-click and paste.</p>
+
+<p>Or, you can simply drag the files into the <code>Project Explorer</code> window, dropping them on <code>test_netcdf</code>.</p>
+
+<p>Eclipse will ask whether you want to move the file or create a link. Creating a link is usually the best choice because moving the file will indeed move it, and deleting it from the project will delete it completely.</p>
+
+<h3 id="buildtheproject">Build the Project</h3>
+
+<p>There are several ways to build the project:</p>
+
+<ol>
+<li>using the &#8220;hammer&#8221; tool on the toolbar</li>
+<li>right-clicking on <code>test_netcdf</code> in the <code>Project Explorer</code> window, and clicking on <code>Build Project</code></li>
+<li>from the <code>Project</code> menu, click on <code>Build Project</code></li>
+</ol>
+
+<p>Build the <code>Debug</code> version first.</p>
+
+<p>(Note that <code>gfortran</code> is fussy about tab characters and unused variables, and may produce a lot of warnings the first time a file is compiled.)</p>
+
+<h3 id="runtheproject">Run the Project</h3>
+
+<p>If the project is successfully built, it can be run by clicking on the binary file (e.g. <code>/test_netcdf/Debug/test_netcdf</code>) in a file browser, which will pop up a Terminal window.</p>
+
+<h4 id="runconfigurations">Run configurations</h4>
+
+<p>The project can also be run &#8220;inside&#8221; of Eclipse by creating a <code>Run Configuration</code>. From the Eclipse <code>Run</code> menu, click on <code>Run Configurations</code>. First, click on the &#8220;Filter&#8221; button (the rightmost one on the button bar), and maker sure <code>Filter Closed Projects</code> is selected (and nothing else).</p>
+
+<p>Then</p>
+
+<ol>
+<li>Add a new <code>C/C++ Application</code> (even though this is Fortran), and</li>
+<li>in the <code>Name:</code> field (if not already autofilled), enter e.g. <code>test_netcdf Debug</code>,</li>
+<li>in the <code>Project</code> field enter <code>test_netcdf</code> (or browse to it), and</li>
+<li>in the <code>C/C++ Application:</code> field, enter e.g., <code>Debug/test_netcdf</code>, or click on <code>Search Project...</code></li>
+</ol>
+
+<p>If there is a command line argument (e.g. a path and filename of a particular data file or info file, it can be entered in the <code>Environment</code> tab of the <code>Run Configurations...</code> tab.</p>
+
+<p>Click on <code>Apply</code>, and then <code>Run</code>. The project should run in a <code>Console</code> window in the Eclipse IDE. The <code>Run</code> button on the toolbar can also be used to run the project.</p>
+
+<h2 id="usingopenmp">Using OpenMP</h2>
+
+<p>OpenMP capabilities can be added to a program as follows:</p>
+
+<ol>
+<li>In the <code>Properties</code> for a particular project, click on <code>Fortran Build</code> and <code>Settings</code>, and under <code>GNU Fortran Complier</code> add the text <code>-fopenmp</code> after <code>gfortran</code> in the <code>Command</code> field (with a space, e.g. <code>gfortran -fopenmp</code>)</li>
+<li>Then click on <code>MacOS X Fortran Linker</code> and <code>Libraries</code>, and add the text <code>gomp</code> to the upper (<code>Libraries</code>) pane, and click on <code>Apply and Close</code></li>
+<li>In the main program, add <code>use omp_lib</code> and add appropriate OpenMP directives.</li>
+</ol>
+
+<h2 id="newprojectwithexistingsettings">New Project with Existing Settings</h2>
+
+<p>It can be tedious to set all of the paths, include and library files, etc. A workaround is to create a simple project, which contains no source files, but for which which all of the the necessary settings have been set. An example of such a project is contained in the folder <code>/new_project_templates/netcdf_openmp_project</code>. The idea is to copy this folder (renaming the folder while doing so), then open the project in Eclipse, rename it, and add source files.</p>
+
+<p>To do this, copy the folder <code>/netcdf_openmp_project</code> to, say, <code>/workspace/netcdf_openmp_project</code>, and rename that folder to, e.g. <code>test_netcdf_openmp</code> (which will be the name of the new project.</p>
+
+<p>Then in Eclipse, use the menu (<code>File</code> <code>Open Projects from File System…</code>) to open the project. Browse to newly renamed folder <code>test_netcdf_openmp</code>, and open it (but not either the <code>Debug</code> or <code>Release</code> folders). Click <code>Finish</code>.</p>
+
+<p>The project will appear under the name <code>netcdf_openmp_project</code>. Rename it to <code>test_netcdf_openmp</code> by right-clicking on <code>netcdf_openmp_project</code> in the <code>Project Explorer</code> window, and clicking <code>Rename</code>.</p>
+
+<p>Then add source files to the project in the usual way.</p>
+
+<p>Alternatively, it&#8217;s possible to simply copy and paste and existing project in the workspace to make a copy. After copying, delete existing source-code files that are no longer applicable, clean the project using the <code>Project &gt; Clean...</code> dialog, and then add new source-code files.</p>
+
+<h2 id="otherstuff">Other stuff</h2>
+
+<ul>
+<li><a href="https://gcc.gnu.org/onlinedocs/gcc-11.2.0/gfortran.pdf">https://gcc.gnu.org/onlinedocs/gcc-11.3.0/gfortran.pdf</a></li>
+<li><a href="https://gcc.gnu.org/onlinedocs/gcc-11.2.0/libgomp.pdf">https://gcc.gnu.org/onlinedocs/gcc-11.3.0/libgomp.pdf</a></li>
+</ul>
+
+<p>gfortran stack vs. heap: <a href="https://jblevins.org/log/segfault">https://jblevins.org/log/segfault</a></p>
+
+<p>Installing or switching between different versions of a formula: <a href="https://stackoverflow.com/questions/3987683/homebrew-install-specific-version-of-formula">https://stackoverflow.com/questions/3987683 /homebrew-install-specific-version-of-formula</a>](https://wiki.eclipse.org/images/c/cd/Eclipse-ptp-XSEDE15-complete.pdf)</p>
+
+<h2 id="troubleshootingmultiplegccgfortraninstallations">Troubleshooting multiple gcc/gfortran installations</h2>
+
+<p>There is an issue that can arise if NCL is installed on the same system, and following the NCL instructions, an older version of <code>gcc</code> was installed. The solution, unfortuately, is to uninstall and reinstall Homebrew, <code>gcc</code> and <code>netcdf</code>.</p>
+
+<p>Uninstall Homebrew (<strong>Note: This uninstalls Homebrew, and all of its installed packages</strong>):</p>
+
+<pre><code> /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)&quot;
+</code></pre>
+
+<p>Reinstall Homebrew</p>
+
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+
+<p>Install <code>gcc</code>:</p>
+
+<pre><code>brew install gcc
+</code></pre>
+
+<p>There will probably be permission issues that turn up, concerning access to `/usr/local'</p>
+
+<p>Take ownership of <code>/usr/local</code>:</p>
+
+<pre><code>cd /usr/local
+sudo chown -R $(whoami):staff *
+</code></pre>
+
+<p>You may have to do this:</p>
+
+<pre><code>brew link --overwrite gcc
+</code></pre>
+
+<p>Check to see if the (newer) <code>gfortran</code> is the default:</p>
+
+<pre><code>which gfortran
+gfortran -v
+</code></pre>
+
+<p>Reinstall the other packages, including <code>netcdf</code> as above.</p>
+
+<p>/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib</p>
+</body></html>

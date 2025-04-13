@@ -1,0 +1,311 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><style type="text/css">body, td {
+   font-family: Times, TimesNewRoman, serif;
+   background-color: white;
+   font-size: 11pt;
+   margin: 40px;
+   width:  720px;
+   text-align:justify;
+}
+
+tt, code, pre {
+   font-family: Consolas, Monaco, monospace;
+   font-size: 10pt;
+   font-weight: bolder;
+}
+
+h1 {
+   font-family: Hevetica, Arial, sans-serif;
+   font-size:16pt;
+   font-weight: normal;
+}
+
+h2 {
+   font-size:16pt;
+   font-weight: normal;
+}
+
+h3 {
+   font-size:14pt;
+   font-weight: normal;
+}
+
+h4 {
+   font-size:14pt;
+   font-weight: normal;
+   font-style: italic;
+}
+
+h5 {
+   font-size:12pt;
+   font-weight: normal;
+}
+
+h6 {
+   font-size:12pt;
+   font-weight: normal;
+   font-style: italic;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre { 
+   margin-top: 0;
+   max-width: 100%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+   background-color:  #E0E0E0;
+}
+
+code.r, code.noeval, code.cpp {
+   background-color: #eeeeee;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#000000;
+   margin:0;
+   padding-left: 1em;
+   padding-right: 1em;
+   border-left: 0.5em #E0E0E0 solid;
+   border-right: 0.5em #E0E0E0 solid
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+
+</style>
+</head><body><h1 id="installncl6.6.2onmacos">Install NCL (6.6.2) on MacOS</h1>
+
+<p>These notes describe installing NCL 6.6.2 on MacOS, see <a href="https://www.ncl.ucar.edu/Download/macosx.shtml">https://www.ncl.ucar.edu/Download/macosx.shtml</a>. This worked for installing NCL on an Apple MacBook Air M2 (2022). It seems that Rosetta 2 takes care of running a version of the program that was compiled for an Intel processor, providing that gcc and gfortran (which provide libraries), were also created for Intel.</p>
+
+<h3 id="installxquartz">Install XQuartz</h3>
+
+<p>XQuartz is an X Window System that can be used to display NCL output on the screen. Even if that never is done, it still needs to be installed. XQuartz can be installed from <a href="https://www.xquartz.org">https://www.xquartz.org</a></p>
+
+<h3 id="downloadthebinary">Download the binary</h3>
+
+<p>See: <a href="https://www.ncl.ucar.edu/Download/install_from_binary.shtml">https://www.ncl.ucar.edu/Download/install_from_binary.shtml</a></p>
+
+<ul>
+<li>Browse to: <a href="https://www.ncl.ucar.edu/Download/list_of_binaries.shtml">https://www.ncl.ucar.edu/Download/list_of_binaries.shtml</a>, and download:</li>
+<li><a href="https://www.earthsystemgrid.org/dataset/ncl.662.dap/file/ncl_ncarg-6.6.2-MacOS_10.14_64bit_gnu730.tar.gz">https://www.earthsystemgrid.org/dataset/ncl.662.dap/file/ncl_ncarg-6.6.2-MacOS_10.14_64bit_gnu730.tar.gz</a></li>
+</ul>
+
+<h3 id="extractfiles">Extract files</h3>
+
+<p>Create a new folder: <code>/usr/local/ncl-6.6.2</code> by opening a Terminal window and entering <code>mkdir /usr/local/ncl-6.6.2</code>. On recent versions of macOS, making a destination folder for the binary may fail if attempted in a Terminal window (owing to the System Integrity Protection (SIP) thing in macOS), producing the following error: <code>mkdir: /usr/local/ncl-6.6.2: Permission denied</code>.</p>
+
+<p>The workaround is to use Finder to create the folder <code>/usr/local/ncl-6.6.2</code>, which will require authentication, and then do this (copy and paste to a Terminal window):</p>
+
+<pre><code>cd /usr/local
+sudo chown -R $(whoami):staff *
+</code></pre>
+
+<p>Note: Finder can be made to show hidden files files and folders by typing in a Terminal window:</p>
+
+<pre><code>defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+</code></pre>
+
+<p>The NCL page indicates that the following approach will work for installing NCL:</p>
+
+<pre><code>tar -zxf ~/Downloads/ncl_ncarg-6.6.2-MacOS_10.14_64bit_gnu730.tar -C /usr/local/ncl-6.6.2
+</code></pre>
+
+<p>If the <code>.tar</code> file didn&#8217;t get decompressed (i.e. it ends in <code>.gz</code>) add <code>.gz</code> to the end of the file name.</p>
+
+<h3 id="setenvironment">Set environment</h3>
+
+<p>Setting the environment has been troublesome. On macOS Catalina, zsh has replaced bash as the default shell, and there seem to be no specific instructions for how to edit the environment files. However, the following seems to work (for the Catalina and newer versions of MacOS:</p>
+
+<p>Edit or create the file <code>/Users/bartlein/.zshenv</code> (used to be <code>/Users/bartlein/.bash_profile</code> before Catalina)</p>
+
+<pre><code>export NCARG_ROOT=/usr/local/ncl-6.6.2  
+export PATH=$NCARG_ROOT/bin:$PATH  
+export LD_LIBRARY_PATH=&quot;${NCARG_ROOT}/lib:{LD_LIBRARY_PATH}&quot;  
+ulimit -s  unlimited
+</code></pre>
+
+<p>NOTE: You must logout, and log back in for this to take effect.
+If you&#8217;re running Catalina, put the contents above in in a file named <code>.zshenv</code> as opposed to <code>.bash_profile</code>.</p>
+
+<h3 id="installgccandgfortran">Install gcc and gfortran</h3>
+
+<p>The NCL page says: &#8220;Download the appropriate version of gcc and gfortran from <a href="http://hpc.sourceforge.net/">http://hpc.sourceforge.net/</a>. If you download the &#8220;gcc-x.y.bin.tar.gz&#8221; file, you will get both gcc and gfortran.&#8221;<br />
+<a href="https://www.ncl.ucar.edu/Download/macosx.shtml">(https://www.ncl.ucar.edu/Download/macosx.shtml)</a></p>
+
+<p>These are the instructions for installing on an <strong>Intel Mac running Big Sur</strong>, but they worked for installing gcc-7.3 on an Apple M2</p>
+
+<ul>
+<li>download <code>gcc-7.3-bin.tar.gz</code></li>
+<li>cd to the <code>Downloads</code> folder. Then</li>
+<li>open a Terminal window, and, while remaining in the <code>Downloads</code> folder, type</li>
+<li><code>gunzip gcc-7.3-bin.tar.gz</code> (if your browser didn&#8217;t do so already) and then type</li>
+<li><code>sudo tar -xvf gcc-7.3-bin.tar -C /</code>.</li>
+<li>Copy additional colormaps to <code>/usr/local/ncl-6.6.2/lib/ncarg/colormaps</code></li>
+</ul>
+
+<p>Note: Sometimes this will corrupt an installation of <code>gcc</code> (and <code>gfortran</code>) and <code>netCDF</code> from Homebrew. If so, reinstall <code>gcc</code> and <code>netcdf</code> from Homebrew.</p>
+
+<h3 id="testtheinstallation">Test the installation</h3>
+
+<p>Typing the following in a command window should return the version number of NCL:</p>
+
+<pre><code>ncl -V
+</code></pre>
+
+<p>The first time that&#8217;s done, MacOS may respond: <code>“ncl” cannot be opened because the developer cannot be verified.</code>. Click <code>Cancel</code>, and go to <code>System Preferences &gt; Security &amp; Privacy &gt; General</code> tab, at the bottom, click on <code>Allow Anyway</code>. Then try again, and you will likely get the message <code>macOS cannot verify the developer of “ncl”. Are you sure you want to open it?</code>. Click <code>Open</code>.</p>
+
+<p>You should see <code>6.6.2</code></p>
+
+<h3 id="installhomebrew">Install Homebrew</h3>
+
+<p>Homebrew is at <a href="https://brew.sh">https://brew.sh</a></p>
+
+<p>Paste the following (or whatever is current on the Homebrew web page) into a Terminal window, and follow the prompts.</p>
+
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+
+<p>Installation can take a little while, and may produce some warnings that are usually benign.</p>
+
+<p>Homebrew might ask you to run the following commands after installation is completed:</p>
+
+<pre><code>(echo; echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;') &gt;&gt; /Users/bartlein/.zprofile
+eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
+</code></pre>
+
+<p>The path (displayed by typing <code>echo $PATH</code>) should look like:</p>
+
+<blockquote>
+<p>/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/ncl-6.6.2/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/ncl-6.6.2/bin</p>
+</blockquote>
+
+<p>It has sometimes been necessary to add an additional environment file to the user home directory. Create the file <code>.zprofile</code> with the contents:</p>
+
+<pre><code>export NCARG_ROOT=/usr/local/ncl-6.6.2  
+export PATH=$NCARG_ROOT/bin:$PATH  
+export LD_LIBRARY_PATH=&quot;${NCARG_ROOT}/lib:{LD_LIBRARY_PATH}&quot;  
+ulimit -s  unlimited
+eval $(/opt/homebrew/bin/brew shellenv)
+</code></pre>
+
+<p>If already installed, update Homebrew (see <a href="https://github.com/Homebrew/brew/blob/master/docs/FAQ.md">https://github.com/Homebrew/brew/blob/master/docs/FAQ.md</a>):</p>
+
+<pre><code>brew update
+brew upgrade
+brew cleanup
+</code></pre>
+
+<h3 id="installnetcdf">Install netCDF</h3>
+
+<p>See <a href="https://formulae.brew.sh/formula/netcdf">https://formulae.brew.sh/formula/netcdf</a>. At the time of this writing (27 Aug 2023), the current version was <code>4.9.2</code>.</p>
+
+<pre><code>brew install netcdf
+</code></pre>
+
+<p>There will be a number of additional dependencies that will be installed as well, as will be true for <code>CDO</code> and <code>NCO</code> below.</p>
+
+<p>If netCDF is already installed, try upgrading:</p>
+
+<pre><code>brew upgrade netcdf
+</code></pre>
+
+<p>If the currently installed version is the most recent one, you’ll get an error like:</p>
+
+<pre><code>Warning: netcdf 4.9.2 is already installed and up-to-date.
+</code></pre>
+
+<p>Check to see if netCDF has been installed:</p>
+
+<pre><code>ncdump
+</code></pre>
+
+<p>The last line of the response should return the current version; here it&#8217;s <code>4.9.2</code></p>
+
+<p>Make a shortcut for getting a headers-only <code>ncdump</code> of a netCDF file. First, find the exact folder in which netCDF was installed, something like: <code>/opt/homebrew/Cellar/netcdf/4.9.2_1/</code>. (4.9.2 is the version of netCDF, and &#8220;_1&#8221; indicates that it&#8217;s the first revised Homebrew version.) You will probably have to to this by hand.</p>
+
+<p>Create a file simply called <code>ncd</code> (no extension) containing:</p>
+
+<pre><code>#! /bin/bash
+pwd
+/opt/homebrew/Cellar/netcdf/4.9.0_1/bin/ncdump -c $1
+</code></pre>
+
+<p>Copy or move this file to <code>/usr/local/bin/</code> (Note that the specific reference to the netCDF library version (<code>4.9.2_1</code>) will have to be edited to match the current version of netCDF when netCDF is upgraded.)</p>
+
+<p>Make the file executable:</p>
+
+<pre><code>sudo chmod +x ncd
+</code></pre>
+
+<p>Then typing, e.g. <code>ncd myfile.nc</code> in a Terminal window will <code>ncdump</code> the headers (attributes, etc.) and coordinate variable information (lon, lat, time).</p>
+
+<h3 id="cdo">CDO</h3>
+
+<p>See <a href="https://code.mpimet.mpg.de/projects/cdo/wiki/MacOS_Platform">https://code.mpimet.mpg.de/projects/cdo/wiki/MacOS_Platform</a></p>
+
+<p>CDO can be installed by typing:</p>
+
+<pre><code>brew install cdo
+</code></pre>
+
+<p>Check the installation (note that there are two hyphens before &#8220;version&#8221;):</p>
+
+<pre><code>cdo --version
+</code></pre>
+
+<p>Note the double hyphen. CDO can be updated as follows:</p>
+
+<pre><code>brew upgrade cdo
+</code></pre>
+
+<h3 id="nco">NCO</h3>
+
+<p>See: <a href="http://nco.sourceforge.net">http://nco.sourceforge.net</a></p>
+
+<p>NCO can be installed as follows:</p>
+
+<pre><code>brew install nco
+</code></pre>
+
+<p>Check the installation (note that there are two hyphens before &#8220;version&#8221;):</p>
+
+<pre><code>ncatted --version 
+</code></pre>
+
+<p>Note the double hyphen, and that it&#8217;s one of the individuals command-line tools in NCO that is being queried for its version number. NCO can be updated as follows:</p>
+
+<pre><code>brew update eco
+</code></pre>
+
+<h3 id="panoply">Panoply</h3>
+
+<p>Panoply is a handy viewer for netCDF files (and also a good check that a new file conforms to common standards like the Climate Forecast (CF) standards). It can be downloaded from:</p>
+
+<pre><code>&lt;https://www.giss.nasa.gov/tools/panoply/&gt;
+</code></pre>
+
+<p>If Panoply pops up a dialog saying that a Java environment must be installed, one can be obtained at Oracle. Here are the instructions, and the download page (as of 26 Feb 2023):</p>
+
+<pre><code>&lt;https://docs.oracle.com/en/java/javase/11/install/installation-jdk-macos.html&gt;
+&lt;https://www.oracle.com/java/technologies/downloads/#jdk19-mac&gt;
+</code></pre>
+
+<p>`</p>
+</body></html>
