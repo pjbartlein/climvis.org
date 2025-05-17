@@ -28,7 +28,7 @@ begin
     ; no changes below here -----------------------------------------------------------------------
 
     ; output files
-    companmfile = companmpath + "ERA5_" + varname + "_monthly_" + calist + ".nc"
+    companmfile = companmpath + "ERA5_t2m_monthly_" + calist + ".nc"
     print("   companmfile: " + companmfile)
 
     ; read anomaly month list

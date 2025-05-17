@@ -42,6 +42,13 @@ Energy-balance components follow the Sellers (1968) sign convention:
 [[Skin temperature]](./content/anim/ltm/globe/skt_globe_1991-2020_ltm/skt_globe_1991-2020_ltm.html)
 [[2m air temperature - Skin temperature]](./content/anim/ltm/globe/t2m-skt_globe_1991-2020_ltm/t2m-skt_globe_1991-2020_ltm.html)
 
+[[ERA5-Land mean daily maximum 2m air temperature)]](./content/anim/ltm/globe/t2m_mean_max_globe_1991-2020_ltm/t2m_mean_max_globe_1991-2020_ltm.html)
+[[ERA5-Land mean daily minimum 2m air temperature)]](./content/anim/ltm/globe/t2m_mean_min_globe_1991-2020_ltm/t2m_mean_min_globe_1991-2020_ltm.html)  
+[[ERA5-Land absolute daily maximum 2m air temperature)]](./content/anim/ltm/globe/t2m_abs_max_globe_1991-2020_ltmax/t2m_abs_max_globe_1991-2020_ltmax.html)
+[[ERA5-Land absolute daily minimum 2m air temperature)]](./content/anim/ltm/globe/t2m_abs_min_globe_1991-2020_ltmin/t2m_abs_min_globe_1991-2020_ltmin.html)  
+[[ERA5-Land absolute maximum 2m air temperature)]](./content/maps/ltm/globe/t2m_abs_max_globe_1991-2020.png) 
+[[ERA5-Land absolute minimum 2m air temperature)]](./content/maps/ltm/globe/t2m_abs_min_globe_1991-2020.png) 
+
 **Atmospheric circulation & winds**  
 
 *Surface*  

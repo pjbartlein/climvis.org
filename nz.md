@@ -8,7 +8,7 @@ ERA4-Land Elevations [[b&w .png]](./content/maps/elev/ERA5-Land_elev_nz_b&w.png)
 
 Values are long-term monthly means 1991 - 2020.
 
-**Radiation, surface energy balance, and temperature**
+**Radiation and surface energy balance**
  
 [[ERA5-Land surface downward shortwave radiation)]](./content/anim/ltm/nz/ssrd_nz_e5land_1991-2020_ltm/ssrd_nz_e5land_1991-2020_ltm.html)  
 [[ERA5-Land surface net shortwave radiation)]](./content/anim/ltm/nz/ssr_nz_e5land_1991-2020_ltm/ssr_nz_e5land_1991-2020_ltm.html)  
@@ -18,9 +18,19 @@ Values are long-term monthly means 1991 - 2020.
 [[ERA5-Land surface sensible heat flux)]](./content/anim/ltm/nz/sshf_nz_e5land_1991-2020_ltm/sshf_nz_e5land_1991-2020_ltm.html)  
 [[ERA5-Land surface latent heat flux)]](./content/anim/ltm/nz/slhf_nz_e5land_1991-2020_ltm/slhf_nz_e5land_1991-2020_ltm.html)  
 
-[[ERA5-Land 2m air temperature)]](./content/anim/ltm/nz/t2m_nz_e5land_1991-2020_ltm/t2m_nz_e5land_1991-2020_ltm.html)
+**Temperature**
 
-**Moisture related variables**
+[[ERA5-Land 2m air temperature (monthly means))]](./content/anim/ltm/nz/t2m_nz_e5land_1991-2020_ltm/t2m_nz_e5land_1991-2020_ltm.html)  
+[[ERA5-Land mean daily maximum 2m air temperature)]](./content/anim/ltm/nz/t2m_mean_max_nz_e5land_1991-2020_ltm/t2m_mean_max_nz_e5land_1991-2020_ltm.html)  
+[[ERA5-Land mean daily minimum 2m air temperature)]](./content/anim/ltm/nz/t2m_mean_min_nz_e5land_1991-2020_ltm/t2m_mean_min_nz_e5land_1991-2020_ltm.html)  
+[[ERA5-Land absolute daily maximum 2m air temperature)]](./content/anim/ltm/nz/t2m_abs_max_nz_e5land_1991-2020_ltmax/t2m_abs_max_nz_e5land_1991-2020_ltmax.html)  
+[[ERA5-Land absolute daily minimum 2m air temperature)]](./content/anim/ltm/nz/t2m_abs_min_nz_e5land_1991-2020_ltmin/t2m_abs_min_nz_e5land_1991-2020_ltmin.html)   
+
+[[ERA5-Land absolute maximum 2m air temperature)]](./content/maps/ltm/nz/t2m_abs_max_nz_1991-2020.png)  
+[[ERA5-Land absolute minimum 2m air temperature)]](./content/maps/ltm/nz/t2m_abs_min_nz_1991-2020.png)  
+[[ERA5-Land mean annual 2m air temperature)]](./content/maps/ltm/nz/t2m_ann_nz_1991-2020.png)
+
+**Moisture-related variables**
 
 [[ERA5-Land total precipitation]](./content/anim/ltm/nz/tp_nz_e5land_1991-2020_ltm/tp_nz_e5land_1991-2020_ltm.html)  
 [[ERA5-Land relative humidity]](./content/anim/ltm/nz/rh_nz_e5land_1991-2020_ltm/rh_nz_e5land_1991-2020_ltm.html)  
