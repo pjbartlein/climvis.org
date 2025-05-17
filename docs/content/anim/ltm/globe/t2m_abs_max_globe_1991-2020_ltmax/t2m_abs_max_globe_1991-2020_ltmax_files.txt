@@ -1,0 +1,12 @@
+png/t2m_abs_max_globe_1991-2020_ltmax_12.png
+png/t2m_abs_max_globe_1991-2020_ltmax_01.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_02.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_03.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_04.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_05.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_06.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_07.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_08.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_09.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_10.png 
+png/t2m_abs_max_globe_1991-2020_ltmax_11.png 
