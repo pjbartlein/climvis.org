@@ -35,7 +35,11 @@ Values are long-term monthly means 1991 - 2020 (or long-term monthly maxima or m
 [[ERA5-Land total precipitation]](./content/anim/ltm/nz/tp_nz_e5land_1991-2020_ltm/tp_nz_e5land_1991-2020_ltm.html)  
 [[ERA5-Land relative humidity]](./content/anim/ltm/nz/rh_nz_e5land_1991-2020_ltm/rh_nz_e5land_1991-2020_ltm.html)  
 [[ERA5-Land vapor-pressure deficit]](./content/anim/ltm/nz/vpd_nz_e5land_1991-2020_ltm/vpd_nz_e5land_1991-2020_ltm.html)   
-[[ERA5-Land &Delta;S = Rain + Snowmelt - Evaporation - Runoff]](./content/anim/ltm/nz/dS2_nz_e5land_1991-2020_ltm/dS2_nz_e5land_1991-2020_ltm.html) 
+[[ERA5-Land &Delta;S = Rain + Snowmelt - Evaporation - Runoff]](./content/anim/ltm/nz/dS2_nz_e5land_1991-2020_ltm/dS2_nz_e5land_1991-2020_ltm.html)   
+
+[[ERA5-Land snowfall]](./content/anim/ltm/nz/sf_nz_e5land_1991-2020_ltm/sf_nz_e5land_1991-2020_ltm.html) 
+[[ERA5-Land snowmelt]](./content/anim/ltm/nz/smlt_nz_e5land_1991-2020_ltm/smlt_nz_e5land_1991-2020_ltm.html) 
+[[ERA5-Land snow depth]](./content/anim/ltm/nz/sde_nz_e5land_1991-2020_ltm/ssde_nz_e5land_1991-2020_ltm.html)  
 
 **Example two-panel (side-by-side) maps**
 
