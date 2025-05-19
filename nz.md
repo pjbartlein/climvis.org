@@ -28,7 +28,11 @@ Values are long-term monthly means 1991 - 2020 (or long-term monthly maxima or m
 
 [[ERA5-Land absolute maximum 2m air temperature)]](./content/maps/ltm/nz/t2m_abs_max_nz_1991-2020.png) (overall maxima)   
 [[ERA5-Land absolute minimum 2m air temperature)]](./content/maps/ltm/nz/t2m_abs_min_nz_1991-2020.png) (overall minima)  
-[[ERA5-Land mean annual 2m air temperature)]](./content/maps/ltm/nz/t2m_ann_nz_1991-2020.png) (long-term mean)
+[[ERA5-Land mean annual 2m air temperature)]](./content/maps/ltm/nz/t2m_ann_nz_1991-2020.png) (long-term mean)  
+
+[[Skin temperature]](./content/anim/ltm/nz/skt_nz_e5land_1991-2020_ltm/skt_nz_e5land_1991-2020_ltm.html)
+[[2m air temperature - Skin temperature]](./content/anim/ltm/nz/t2m-skt_nz_e5land_1991-2020_ltm/t2m-skt_nz_e5land_1991-2020_ltm.html) (long-term means)  
+[[2m air temperature & Skin temperature]](./content/anim/ltm/nz/t2m_skt_nz_e5land_1991-2020_ltm/t2m_skt_nz_e5land_1991-2020_ltm.html) (long-term means)
 
 **Moisture-related variables**
 
@@ -39,7 +43,7 @@ Values are long-term monthly means 1991 - 2020 (or long-term monthly maxima or m
 
 [[ERA5-Land snowfall]](./content/anim/ltm/nz/sf_nz_e5land_1991-2020_ltm/sf_nz_e5land_1991-2020_ltm.html) 
 [[ERA5-Land snowmelt]](./content/anim/ltm/nz/smlt_nz_e5land_1991-2020_ltm/smlt_nz_e5land_1991-2020_ltm.html) 
-[[ERA5-Land snow depth]](./content/anim/ltm/nz/sde_nz_e5land_1991-2020_ltm/ssde_nz_e5land_1991-2020_ltm.html)  
+[[ERA5-Land snow depth]](./content/anim/ltm/nz/sde_nz_e5land_1991-2020_ltm/sde_nz_e5land_1991-2020_ltm.html)  
 
 **Example two-panel (side-by-side) maps**
 
