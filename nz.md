@@ -35,8 +35,8 @@ Values are long-term monthly means 1991 - 2020 (or long-term monthly maxima or m
 [[ERA5-Land mean annual 2m air temperature)]](./content/maps/ltm/nz/t2m_ann_nz_1991-2020.png) (long-term mean)  
 
 [[Skin temperature]](./content/anim/ltm/nz/skt_nz_e5land_1991-2020_ltm/skt_nz_e5land_1991-2020_ltm.html)
-[[2m air temperature - Skin temperature]](./content/anim/ltm/nz/t2m-skt_nz_e5land_1991-2020_ltm/t2m-skt_nz_e5land_1991-2020_ltm.html) (long-term means)  
-[[2m air temperature & Skin temperature]](./content/anim/ltm/nz/t2m_skt_nz_e5land_1991-2020_ltm/t2m_skt_nz_e5land_1991-2020_ltm.html) (long-term means)
+[[2m air temperature - Skin temperature]](./content/anim/ltm/nz/t2m-skt_nz_e5land_1991-2020_ltm/t2m-skt_nz_e5land_1991-2020_ltm.html) (long-term monthly means)  
+[[2m air temperature & Skin temperature]](./content/anim/ltm/nz/t2m_skt_nz_e5land_1991-2020_ltm/t2m_skt_nz_e5land_1991-2020_ltm.html) (long-term monthly means)
 
 **Moisture-related variables**
 
