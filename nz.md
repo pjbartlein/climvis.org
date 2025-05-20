@@ -20,14 +20,18 @@ Values are long-term monthly means 1991 - 2020 (or long-term monthly maxima or m
 
 **Temperature**
 
-[[ERA5-Land 2m air temperature]](./content/anim/ltm/nz/t2m_nz_e5land_1991-2020_ltm/t2m_nz_e5land_1991-2020_ltm.html) (long-term monthly means)  
-[[ERA5-Land mean maximum 2m air temperature]](./content/anim/ltm/nz/t2m_mean_max_nz_e5land_1991-2020_ltm/t2m_mean_max_nz_e5land_1991-2020_ltm.html) (long-term monthly means)  
-[[ERA5-Land mean minimum 2m air temperature]](./content/anim/ltm/nz/t2m_mean_min_nz_e5land_1991-2020_ltm/t2m_mean_min_nz_e5land_1991-2020_ltm.html)  (long-term monthly means)  
-[[ERA5-Land absolute maximum 2m air temperature]](./content/anim/ltm/nz/t2m_abs_max_nz_e5land_1991-2020_ltmax/t2m_abs_max_nz_e5land_1991-2020_ltmax.html)  (long-term monthly maxima)  
-[[ERA5-Land absolute minimum 2m air temperature]](./content/anim/ltm/nz/t2m_abs_min_nz_e5land_1991-2020_ltmin/t2m_abs_min_nz_e5land_1991-2020_ltmin.html)  (long-term monthly minima) 
+[[ERA5-Land monthly mean 2m air temperature]](./content/anim/ltm/nz/t2m_nz_e5land_1991-2020_ltm/t2m_nz_e5land_1991-2020_ltm.html) (long-term monthly means)   
 
-[[ERA5-Land absolute maximum 2m air temperature)]](./content/maps/ltm/nz/t2m_abs_max_nz_1991-2020.png) (overall maxima)   
+[[ERA5-Land monthly mean maximum 2m air temperature]](./content/anim/ltm/nz/t2m_mean_max_nz_e5land_1991-2020_ltm/t2m_mean_max_nz_e5land_1991-2020_ltm.html) (long-term monthly means)  
+[[ERA5-Land monthly absolute maximum 2m air temperature]](./content/anim/ltm/nz/t2m_abs_max_nz_e5land_1991-2020_ltmax/t2m_abs_max_nz_e5land_1991-2020_ltmax.html)  (long-term monthly maxima)  
+[[ERA5-Land absolute maximum 2m air temperature)]](./content/maps/ltm/nz/t2m_abs_max_nz_1991-2020.png) (overall maxima)  
+
+
+ 
+[[ERA5-Land monthly mean minimum 2m air temperature]](./content/anim/ltm/nz/t2m_mean_min_nz_e5land_1991-2020_ltm/t2m_mean_min_nz_e5land_1991-2020_ltm.html)  (long-term monthly means)  
+[[ERA5-Land monthly absolute minimum 2m air temperature]](./content/anim/ltm/nz/t2m_abs_min_nz_e5land_1991-2020_ltmin/t2m_abs_min_nz_e5land_1991-2020_ltmin.html)  (long-term monthly minima)  
 [[ERA5-Land absolute minimum 2m air temperature)]](./content/maps/ltm/nz/t2m_abs_min_nz_1991-2020.png) (overall minima)  
+
 [[ERA5-Land mean annual 2m air temperature)]](./content/maps/ltm/nz/t2m_ann_nz_1991-2020.png) (long-term mean)  
 
 [[Skin temperature]](./content/anim/ltm/nz/skt_nz_e5land_1991-2020_ltm/skt_nz_e5land_1991-2020_ltm.html)
