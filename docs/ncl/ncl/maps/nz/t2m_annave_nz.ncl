@@ -3,10 +3,10 @@
 mapvar = "t2m"
 mapvar2 = "t2m_ann"
 data_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land/derived/ltm_monthly/"
-map_path = "//Users/bartlein/Dropbox/WorkCurrent/ERA5/maps/single/"
+map_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/content/maps/ltm/"
 mask_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land_fixed/"
 maskfile = "ERA5-Land_lsm.nc"
-title_0 = "Annual Average 2-m Air Temperature (~S~o~N~C~N~)"
+title_0 = "Mean Annual 2-m Air Temperature (~S~o~N~C~N~)"
 title_2 = "Data: ERA5-Land Reanalysis"
 title_3 = "1991-2020 Long-Term Mean"
 

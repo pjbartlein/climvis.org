@@ -2,13 +2,13 @@
 
 mapvar = "t2m"
 filename = "_nz_e5land_1991-2020_ltm"
-data_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land/ltm_monthly/"
-map_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/maps/nz/" + mapvar + filename + "/png/"
-title_0 = "2 m Air Temperature (~S~o~N~C~N~)"
+data_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land/derived/ltm_monthly/"
+map_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/content/anim/ltm/nz/" + mapvar + filename + "/png/"
+title_0 = "Monthly Mean 2-m Air Temperature (~S~o~N~C~N~)"
 title_2 = "Data: ERA5-Land Reanalysis"
 title_3 = "1991-2020 Long-Term Mean"
 
-infile = "ERA5-Land_" + mapvar + "_monthly_1991-2020_ltm.nc"
+infile = "ERA5-Land_" + mapvar + "_monthly_199101-202012_ltm.nc"
 
 ; shapefiles
 land_dir = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/shp_files/ne_10m_coastline/"

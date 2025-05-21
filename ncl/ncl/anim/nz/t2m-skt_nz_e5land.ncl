@@ -7,7 +7,7 @@ data_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land/derived/ltm
 map_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/content/anim/ltm/nz/" + mapvar + mapstr + "/png/"
 mask_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land_fixed/"
 maskfile = "ERA5-Land_lsm.nc"
-title_0 = "2 m Air Temperature - Skin Temperature (~S~o~N~C~N~)"
+title_0 = "Monthly Mean 2-m Air Temp. - Skin Temp. (~S~o~N~C~N~)"
 title_2 = "Data: ERA5-Land Reanalysis"
 title_3 = "1991-2020 Long-Term Mean"
 

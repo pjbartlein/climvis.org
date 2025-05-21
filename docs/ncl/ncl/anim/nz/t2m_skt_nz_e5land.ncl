@@ -1,15 +1,17 @@
 
 ; 2-up plot of scalar variables
 
-mapfile = "t2m_tp_nz_e5land_1991-2020_ltm"
+mapfile = "t2m_skt_nz_e5land_1991-2020_ltm"
 mapvar1 = "t2m"
 ncvar1 = "t2m"
 mapvar2 = "skt"
 ncvar2 = "skt"
-data_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land/ltm_monthly/"
-map_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/maps/nz/" + mapfile + "/png/"
-title_01 = "2 m Air Temperature (~S~o~N~C~N~)"
-title_02 = "Skin Temperature (~S~o~N~C~N~)"
+data_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land/derived/ltm_monthly/"
+map_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/content/anim/ltm/nz/" + mapfile + "/png/"
+mask_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land_fixed/"
+maskfile = "ERA5-Land_lsm.nc"
+title_01 = "Monthly Mean 2 m Air Temperature (~S~o~N~C~N~)"
+title_02 = "Monthly Mean Skin Temperature (~S~o~N~C~N~)"
 title_0 = "2 m Air Temperature & Skin Temperature"
 title_2 = "Data: ERA5-Land Reanalysis"
 title_3 = "1991-2020 Long-Term Mean"
@@ -56,9 +58,12 @@ printMinMax(pltvar1, 1)
 ; open file and read data
 f2 = addfile(data_path + infile2, "r")
 pltvar2 = short2flt(f2->$mapvar2$(:,:,:))
-pltvar1 = pltvar1 - 273.15
-lat = f2->latitude
-time = f2->time
+pltvar2 = pltvar2 - 273.15
+pltvar2@_FillValue = 1e32
+pltvar2_missing_value = pltvar2@missing_value
+print(pltvar2@FillValue)
+print(pltvar2_missing_value)
+
 ; pltvar&lon       = lon
 ; pltvar&lat       = lat
 ; pltvar&time      = time
@@ -66,6 +71,20 @@ pltvar2 = lonFlip(pltvar2)
 printVarSummary(pltvar2)
 printMinMax(pltvar2, 1)
 
+; landmask
+f3 = addfile(mask_path + maskfile, "r")
+maskvar = short2flt(f3->lsm(:,:,:))
+maskvar = lonFlip(maskvar)
+printVarSummary(maskvar)
+maskvar2 = new((/dimsizes(pltvar1)/), float)
+printVarSummary(maskvar2)
+
+do i = 0, 11
+    maskvar2(i,:,:) = maskvar(0,:,:)
+end do
+
+pltvar2 = where(maskvar2 .lt. 0.5, pltvar2@_FillValue, pltvar2)
+
 ; 2 m air temperature
 level1 = new((/ 15 /), float)
 level1 = (/-35, -30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35 /)
@@ -73,10 +92,10 @@ level1_begclr = 238
 level1_endclr = 253
 
 ; 2 m air temperature
-level1 = new((/ 15 /), float)
-level1 = (/-35, -30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35 /)
-level1_begclr = 238
-level1_endclr = 253
+level2 = new((/ 15 /), float)
+level2 = (/-35, -30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35 /)
+level2_begclr = 238
+level2_endclr = 253
 
 ; plotting resources
 

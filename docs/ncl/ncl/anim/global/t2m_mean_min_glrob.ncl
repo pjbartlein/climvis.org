@@ -1,11 +1,12 @@
 ; 1-up plot of a scalar variable
 
 mapvar = "t2m_mean_min"
+mapstr = "_globe_1991-2020_ltm"
 data_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land/derived/monthly_max_min/"
-map_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/maps/globe/" + mapvar + "_globe_1991-2020_ltm/png/"
+map_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/maps/globe/" + mapvar + mapstr + "/png/"
 mask_path = "/Users/bartlein/Dropbox/WorkCurrent/ERA5/data/ERA5-Land_fixed/"
 maskfile = "ERA5-Land_lsm.nc"
-title_0 = "Mean Daily Minimum 2-m Air Temperature (~S~o~N~C~N~)"
+title_0 = "Mean Minimum 2-m Air Temperature (~S~o~N~C~N~)"
 title_2 = "Data: ERA5-Land Reanalysis (Hourly Data)"
 title_3 = "1991-2020 Long-Term Mean"
 
@@ -188,7 +189,7 @@ do m = 0, nm-1
     wks_type@wkHeight = 1200
 
     monthstring  = sprinti("%0.2i", m+1)
-    mapfile = mapvar + "_gl_" + monthstring
+    mapfile = mapvar + mapstr + "_" + monthstring
     wks  = gsn_open_wks (wks_type, map_path + mapfile)
     ; gsn_define_colormap(wks,clr_map)
     ; drawNDCGrid(wks)                   ; Draw an NDC grid for reference
