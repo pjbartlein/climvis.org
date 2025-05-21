@@ -39,15 +39,18 @@ Energy-balance components follow the Sellers (1968) sign convention:
 [[2m air temperature]](./content/anim/ltm/globe/t2m_globe_1991-2020_ltm/t2m_globe_1991-2020_ltm.html) 
 [[2m air temp. (polar)]](./content/anim/ltm/polar/t2m_polar_1991-2020_ltm/t2m_polar_1991-2020_ltm.html)
 [[Surface net radiation & 2m air temp]](./content/anim/ltm/globe/t2m_snr_globe_1991-2020_ltm/t2m_snr_globe_1991-2020_ltm.html) (long-term monthly means)  
-[[Skin temperature]](./content/anim/ltm/globe/skt_globe_1991-2020_ltm/skt_globe_1991-2020_ltm.html)
-[[2m air temperature - Skin temperature]](./content/anim/ltm/globe/t2m-skt_globe_1991-2020_ltm/t2m-skt_globe_1991-2020_ltm.html)
 
-[[ERA5-Land monthly mean maximum 2m air temp.]](./content/anim/ltm/globe/t2m_mean_max_globe_1991-2020_ltm/t2m_mean_max_globe_1991-2020_ltm.html) [[ERA5-Land monthly mean minimum 2m air temp.]](./content/anim/ltm/globe/t2m_mean_min_globe_1991-2020_ltm/t2m_mean_min_globe_1991-2020_ltm.html)  (long-term monthly means)  
-[[ERA5-Land monthly absolute maximum 2m air temp.
-]](./content/anim/ltm/globe/t2m_abs_max_globe_1991-2020_ltmax/t2m_abs_max_globe_1991-2020_ltmax.html)
-[[ERA5-Land monthly absolute minimum 2m air temp.]](./content/anim/ltm/globe/t2m_abs_min_globe_1991-2020_ltmin/t2m_abs_min_globe_1991-2020_ltmin.html) (long-term monthly max and min)  
-[[ERA5-Land absolute maximum 2m air temp.]](./content/maps/ltm/globe/t2m_abs_max_globe_1991-2020.png) 
-[[ERA5-Land absolute minimum 2m air temp.]](./content/maps/ltm/globe/t2m_abs_min_globe_1991-2020.png) (overall maximum and minimum)
+[[ERA5-Land monthly mean maximum 2m air temp.]](./content/anim/ltm/globe/t2m_mean_max_globe_1991-2020_ltm/t2m_mean_max_globe_1991-2020_ltm.html) (long-term monthly means)   
+[[ERA5-Land monthly absolute maximum 2m air temp. 
+]](./content/anim/ltm/globe/t2m_abs_max_globe_1991-2020_ltmax/t2m_abs_max_globe_1991-2020_ltmax.html) (long-term monthly maxima)   
+[[ERA5-Land absolute maximum 2m air temp.]](./content/maps/ltm/globe/t2m_abs_max_globe_1991-2020.png) (overall maxima) 
+
+[[ERA5-Land monthly mean minimum 2m air temp.]](./content/anim/ltm/globe/t2m_mean_min_globe_1991-2020_ltm/t2m_mean_min_globe_1991-2020_ltm.html)  (long-term monthly means)  
+[[ERA5-Land monthly absolute minimum 2m air temp.]](./content/anim/ltm/globe/t2m_abs_min_globe_1991-2020_ltmin/t2m_abs_min_globe_1991-2020_ltmin.html) (long-term monthly minima)  
+[[ERA5-Land absolute minimum 2m air temp.]](./content/maps/ltm/globe/t2m_abs_min_globe_1991-2020.png) (overall minima)
+
+[[Skin temperature]](./content/anim/ltm/globe/skt_globe_1991-2020_ltm/skt_globe_1991-2020_ltm.html)
+[[2m air temperature - Skin temperature]](./content/anim/ltm/globe/t2m-skt_globe_1991-2020_ltm/t2m-skt_globe_1991-2020_ltm.html) (long-term monthly means)
 
 **Atmospheric circulation & winds**  
 
