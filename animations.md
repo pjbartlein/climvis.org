@@ -28,7 +28,9 @@ The maps on this page are based on data from the ERA5 and ERA5-Land Reanalysis d
 [[substrate heat flux/change in storage]](./content/anim/ltm/globe/sghf_globe_1991-2020_ltm/sghf_globe_1991-2020_ltm.html)
 [[all]](./content/anim/ltm/globe/shf_globe_1991-2020_ltm/shf_globe_1991-2020_ltm.html)
 
-Energy-balance components follow the Sellers (1968) sign convention:  
+ERA5 and ERA5-Land Energy-balance components follow the Sellers (1965, *Physical Climatology*) sign convention, in which flows toward the surface are declared to be positive (and flows away negative). Howver, for non-radiative fluxes, like latent and sesible heating, The Sellers convention produces counter-intuitive patterns: Regions of high latent heat flux and evaporation will have negative signs, as will hot regions with high sensible heat fluxes. Consequently for non-raditative fluxes, we adopt the Oke (1988, *Boundary Layer Climates*) sign convention: flows from the surface toward the atmosphere (e.g. high evaporation, latent heating, or heat-flow from storage) are positive, while flows from the atmosphere toward the surface are negative.
+
+To summarize:
 
 * radiative fluxes (e.g. net radiation): energy flow toward the surface is positive (orange); energy flow away is negative (blue);  
 * non-radiative fluxes (e.g. latent heat flux): energy flow from the surface toward the atmosphere is positive (orange); energy flow from the atmosphere toward the surface is negative (blue);  
